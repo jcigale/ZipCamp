@@ -12,4 +12,5 @@
 #  updated_at  :datetime         not null
 #
 class Review < ApplicationRecord
+    validates :title, :body, :recommended, :author_id, :spot_id, presence: true
 end

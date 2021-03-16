@@ -16,4 +16,6 @@
 class Spot < ApplicationRecord
     serialize :details, Hash
     serialize :activities, Array
+
+    validates :description, :longitude, :latitude, :spot_type, :details, presence: true
 end

@@ -11,4 +11,5 @@
 #  updated_at :datetime         not null
 #
 class Booking < ApplicationRecord
+    validates :start_date, :end_date, :user_id, :spot_id, presence: true
 end
