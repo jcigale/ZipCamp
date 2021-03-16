@@ -1,0 +1,4 @@
+Review.create({title:'good', body:'it twas good', recommended: true, author_id:1, spot_id:1})
+Spot.create({description:'blah blah blah', longitude:'123', latitude:'456', photos:[1], spot_type:'banana', details: {1=>2}, activities: ['swimming']})
+User.create({first_name: 'John', last_name: 'Cigale', email: 'jcigale98@gmail.com', zipcode: 12847, password: '1234567678'}) 
+Booking.create({start_date:20210812, end_date:20210828, user_id: 1, spot_id: 1})
