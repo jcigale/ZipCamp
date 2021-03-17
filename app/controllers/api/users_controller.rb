@@ -7,11 +7,11 @@ class Api::UsersController < ApplicationController
     def create
         @user = User.new(user_params)
 
-        if @user.savelogin(@user)
+        if @user.save!
             login(@user)
-            render :show
+            render "api/users/show"
         else
-            render json: @users.errors.full_messages, status: 422
+            render json: @user.errors.full_messages, status: 422
         end
     end
 
@@ -19,7 +19,7 @@ class Api::UsersController < ApplicationController
         @user = User.find(params[:id])
         
         if @user.update(user_params)
-            render :show
+            render "api/users/show"
         else
             render json: ['Something went wrong'], status: 422
         end
@@ -28,6 +28,6 @@ class Api::UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:email, :password)
+        params.require(:user).permit(:first_name, :last_name, :email, :password, :zipcode)
     end
 end
