@@ -11,15 +11,20 @@ const Greeting = ({ currentUser, logout }) => {
             </div>
             <div className='right-nav'>
                 <div><Link to='/login' style={{textDecoration: 'none'}}><span>Log In</span></Link></div>
-                <div><Link to='/signup' style={{textDecoration: 'none'}} ><span>Sign Up</span></Link></div>
+                <div><Link to='/signup' style={{ textDecoration: 'none' }} className='js-modal-open'><span>Sign Up</span></Link></div>
             </div>
         </nav>
     );
     const personalGreeting = () => (
-        <hgroup className="header">
-            <h2 className="header-name">Welcome {currentUser.first_name}</h2>
-            <button className="header-button" onClick={logout}>Log Out</button>
-        </hgroup>
+        <nav className='nav-bar'>
+            <div className='left-nav'>
+                <img src={logo} alt="logo"/>
+                {/* <span>LOGO</span> */}
+            </div>
+            <div className='right-nav'>
+                <button className="header-button" onClick={logout}><span>Log Out</span></button>
+            </div>
+        </nav>
     );
 
     return currentUser ? personalGreeting() : sessionLinks();

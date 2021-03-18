@@ -47,7 +47,7 @@ class SignupSessionForm extends React.Component {
                     <small>Discover the best camping near me</small>
                     </h2>
                     <form onSubmit={this.handleSubmit} className='signup-form-box'>
-                        {/* {this.renderErrors()} */}
+                        {this.renderErrors()}
                         <div className='signup-form'>
                             <br />
                             <div className='names'>
