@@ -26,14 +26,16 @@ class SignupSessionForm extends React.Component {
     };
 
     renderErrors() {
-        return (
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li key={i}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
+        if (this.props.errors.length > 0) return (
+            <div className='signup-errors'>
+                <ul>
+                    {this.props.errors.map((error, i) => (
+                        <li key={i}>
+                            {error}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         )
     };
 

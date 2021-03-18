@@ -123,3 +123,27 @@
 
     }
 }
+
+.signup-errors {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    //text-align: center;
+    color: #C44841;
+    height: auto;
+    width: 100%;
+    border-radius: 2px;
+    background-color: #fdf0ef;
+    margin-bottom: 15px;
+
+    li {
+        padding: 3px;
+        background: transparent;
+        font-family: Calibre,
+            Helvetica,
+            Arial,
+            sans-serif;
+        font-size: 13px;
+    }
+}
