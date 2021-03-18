@@ -18,4 +18,12 @@ class Spot < ApplicationRecord
     serialize :activities, Array
 
     validates :description, :longitude, :latitude, :spot_type, :details, presence: true
+
+    has_many :bookings,
+        foreign_key: :spot_id,
+        class_name: :Booking
+
+    has_many :reviews,
+        foreign_key: :spot_id,
+        class_name: :Review
 end

@@ -7,9 +7,27 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script type='text/javascript'>
+      window.logo = "<%=image_url('logo.png')%>"
+    </script>
   </head>
 
   <body>
     <%= yield %>
+    <script>
+      $(function(){
+
+      $("body").on("click", ".js-modal-open", function(event){
+        event.preventDefault();
+        $(".signup-form-container").addClass("is-open");
+      });
+
+      $("body").on("click", ".js-modal-close", function(event){
+        event.preventDefault();
+        $(".signup-form-container").removeClass("is-open");
+      });
+
+      }); 
+  </script>
   </body>
 </html>
