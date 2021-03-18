@@ -9,10 +9,14 @@ import SignupFormContainer from './session_form/signup_form_container';
 const App = () => (
     <div>
         <header>
+            <span>Recreate responsibly during COVID-19</span>
+            
             <GreetingContainer />
         </header>
+        <Switch>
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
+        </Switch>
     </div>
 )
 

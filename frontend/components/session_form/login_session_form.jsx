@@ -23,26 +23,28 @@ class LoginSessionForm extends React.Component {
     };
 
     renderErrors() {
-        return(
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li key={i}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
+        if (this.props.errors.length > 0) return(
+            <div className='errors'>
+                <ul>
+                    {this.props.errors.map((error, i) => (
+                        <li key={i}>
+                            {error}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         )
     };
 
     render() {
         return (
             <div className='login-form-container'>
-                <form onSubmit={this.handleSubmit} className='login-fomr-box'>
-                    <h2 className='login-text'>Welcome back!
-                    <br/>
+                <h2 className='login-text'>Welcome back!
+                    <br />
                     <small>Lets get you outside.</small>
-                    </h2>
-                    <br/>
+                </h2>
+                <br />
+                <form onSubmit={this.handleSubmit} className='login-form-box'>
                     {this.renderErrors()}
                     <div className='login-form'>
                         <br/>
@@ -62,7 +64,7 @@ class LoginSessionForm extends React.Component {
                                 className='login-input' />
                         </label>
                         <br/>
-                        <button className='session-submit' type='submit'>{this.props.formType}</button>
+                        <button className='session-submit' type='submit'>Log in</button>
                     </div>
                 </form>
             </div>
