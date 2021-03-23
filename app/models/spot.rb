@@ -26,4 +26,11 @@ class Spot < ApplicationRecord
     has_many :reviews,
         foreign_key: :spot_id,
         class_name: :Review
+
+    def self.in_bounds(bounds)
+        self.where("latitude < ?", bounds[:northEast][:lat])
+        .where("latitude > ?", bounds[:southWest][:lat])
+        .where("longitude > ?", bounds[:southWest][:lng])
+        .where("longitude < ?", bounds[:northEast][:lng])
+    end
 end

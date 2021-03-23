@@ -5,7 +5,6 @@ import { login, clearErrors } from '../../actions/session_actions';
 import LoginSessionForm from './login_session_form';
 
 const mapStateToProps = ({ errors }) => {
-    // debugger
     return {
         errors: errors.session,
         formType: 'login',

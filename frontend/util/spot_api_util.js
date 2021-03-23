@@ -13,7 +13,7 @@ export const fetchSpot = id => (
     })
 )
 
-export const createReveiw = review => (
+export const createReview = review => (
     $.ajax({
         method: 'POST',
         url: 'api/reviews',
