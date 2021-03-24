@@ -6,7 +6,7 @@ const handleChange = (filter, updateFilter) => e => (
 
 const FilterForm = ({ spotType, updateFilter }) => (
     <div>
-        <nav>
+        <nav className='filter-nav'>
             <input type="button" value='RVs' onClick={handleChange('spotType', updateFilter)}/>
             <input type="button" value='Campsites' onClick={handleChange('spotType', updateFilter)} />
             <input type="button" value='Lodging' onClick={handleChange('spotType', updateFilter)} />

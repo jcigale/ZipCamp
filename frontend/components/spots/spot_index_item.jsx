@@ -13,14 +13,20 @@ class SpotIndexItem extends React.Component{
     }
 
     render() {
-        const { description, spot_type } = this.props.spot;
+        const {photo_url, spot_type, title, price } = this.props.spot;
+        console.log(this.props.spot);
+        
         return (
             <div className='spot-index-item' onClick={this.handleClick} >
-                <div className='spot-info'>
-                    <span className='type'>{spot_type}</span>
-                    <span className='description'>{description}</span>
+                <img src={photo_url}/>
+                <div className="spot-info">
+                    
+                    <span className='spot-title'>{title}</span>
+                    <div className='price-type'>
+                        <span className='spot-type'>{spot_type}</span>
+                        <span className='spot-price'>${price}<span>/NIGHT</span></span>
+                    </div>
                 </div>
-                {/* <img src={photo}/> */}
             </div>
         )
     }

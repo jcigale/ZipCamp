@@ -6,12 +6,12 @@
 #  description :text             not null
 #  longitude   :string           not null
 #  latitude    :string           not null
-#  photos      :string           not null, is an Array
 #  spot_type   :string           not null
 #  details     :text             not null
 #  activities  :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  photo_url   :string
 #
 
 # This model initially had no columns defined. If you add columns to the

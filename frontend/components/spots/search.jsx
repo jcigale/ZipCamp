@@ -6,8 +6,10 @@ import FilterForm from './filter_form';
 const Search = ({ spots, spotType, updateFilter}) => (
     <div>
         <FilterForm spotType={spotType} updateFilter={updateFilter}/> 
-        <SpotMap spots={spots} updateFilter={updateFilter} singleSpot={false} />
+        <div className='map-spots'>
         <SpotIndex spots={spots} />
+        <SpotMap spots={spots} updateFilter={updateFilter} singleSpot={false} />
+        </div>
     </div>
 )
 

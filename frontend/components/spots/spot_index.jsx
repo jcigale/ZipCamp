@@ -2,9 +2,7 @@ import React from 'react';
 import SpotIndexItem from './spot_index_item';
 
 const SpotIndex = ({ spots }) => (
-    <div>
-        <h1>Spots: </h1>
-        {console.log(spots)}
+    <div className='spots'>
         {spots.map(spot => (
             <SpotIndexItem spot={spot} key={spot.id} />
         ))}

@@ -6,18 +6,20 @@
 #  description :text             not null
 #  longitude   :string           not null
 #  latitude    :string           not null
-#  photos      :string           not null, is an Array
 #  spot_type   :string           not null
 #  details     :text             not null
 #  activities  :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  photo_url   :string
 #
 class Spot < ApplicationRecord
     serialize :details, Hash
     serialize :activities, Array
 
     validates :description, :longitude, :latitude, :spot_type, :details, presence: true
+
+    has_one_attached :photo
 
     has_many :bookings,
         foreign_key: :spot_id,
