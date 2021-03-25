@@ -32,7 +32,7 @@ class MarkerManager {
     }
 
     removeMarker(marker) {
-        this.markers[marker.benchId].setMap(null);
+        this.markers[marker.spotId].setMap(null);
         delete this.marker[marker.spotId];
     }
 }

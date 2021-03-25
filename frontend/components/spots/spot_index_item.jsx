@@ -9,12 +9,11 @@ class SpotIndexItem extends React.Component{
 
     handleClick() {
         const spotId = this.props.spot.id;
-        this.props.history.push(`/spots.${spotId}`);
+        this.props.history.push(`/spots/${spotId}`);
     }
 
     render() {
         const {photo_url, spot_type, title, price } = this.props.spot;
-        console.log(this.props.spot);
         
         return (
             <div className='spot-index-item' onClick={this.handleClick} >

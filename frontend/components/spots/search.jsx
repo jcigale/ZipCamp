@@ -8,7 +8,7 @@ const Search = ({ spots, spotType, updateFilter}) => (
         <FilterForm spotType={spotType} updateFilter={updateFilter}/> 
         <div className='map-spots'>
         <SpotIndex spots={spots} />
-        <SpotMap spots={spots} updateFilter={updateFilter} singleSpot={false} />
+        <SpotMap spots={spots} updateFilter={updateFilter} />
         </div>
     </div>
 )

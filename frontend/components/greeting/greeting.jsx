@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-//import logo from "../../../app/assets/images/logo.jpg";
 
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
         <nav className='nav-bar'>
             <div className='left-nav'>
-                <img src={logo} alt="logo"/>
-                {/* <span>LOGO</span> */}
+                <Link to='/'><img src={logo} alt="logo" /></Link>  
             </div>
             <div className='right-nav'>
                 <div><Link to='/login' style={{textDecoration: 'none'}}><span>Log In</span></Link></div>
@@ -18,8 +16,8 @@ const Greeting = ({ currentUser, logout }) => {
     const personalGreeting = () => (
         <nav className='nav-bar'>
             <div className='left-nav'>
-                <img src={logo} alt="logo"/>
-                {/* <span>LOGO</span> */}
+                <Link to='/'><img src={logo} alt="logo" /></Link>
+                
             </div>
             <div className='right-nav'>
                 <button className="header-button" onClick={logout}><span>Log Out</span></button>

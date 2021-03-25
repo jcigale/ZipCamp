@@ -18,22 +18,12 @@ class SpotMap extends React.Component {
         const map = this.refs.map;
         this.map = new google.maps.Map(map, mapOptions);
         this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
-        if (this.props.singleSpot) {
-            this.props.fetchSpot(this.props.spotId);
-        } else {
-            this.registerListeners();
-            this.MarkerManager.updateMarkers(this.props.spots)
-        }
+        this.registerListeners();
+        this.MarkerManager.updateMarkers(this.props.spots)
     }
     
     componentDidUpdate() {
-        if (this.props.singleSpot) {
-            const targetSpotKey = Object.keys(this.props.spots)[0];
-            const targetSpot = this.props.spots[targetSpotKey];
-            this.MarkerManager.updateMarkers([targetSpot]); 
-        } else {
-            this.MarkerManager.updateMarkers(this.props.spots);
-        }
+        this.MarkerManager.updateMarkers(this.props.spots);
     }
 
     registerListeners() {
