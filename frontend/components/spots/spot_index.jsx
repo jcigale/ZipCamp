@@ -1,12 +1,20 @@
 import React from 'react';
 import SpotIndexItem from './spot_index_item';
 
-const SpotIndex = ({ spots }) => (
+const SpotIndex = ({ spots, spotType }) => {
+    // debugger
+    // const filterSpots = (spots, spotType) => {
+    //     if (spotType === 'All Listings') return spots; 
+    //     return spots.filter(spot => spot.spotType === spotType)
+    // }
+    
+    console.log(spots);
+    return(
     <div className='spots'>
-        {spots.map(spot => (
+            {spots.map(spot => (
             <SpotIndexItem spot={spot} key={spot.id} />
         ))}
-    </div>
-)
+    </div>)
+}
 
 export default SpotIndex;

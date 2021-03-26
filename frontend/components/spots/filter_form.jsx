@@ -1,7 +1,7 @@
 import React from 'react';
 
 const handleChange = (filter, updateFilter) => e => (
-    updateFilter(filter, parseInt(e.currentTarget.value))
+    updateFilter(filter, e.currentTarget.value)
 );
 
 const FilterForm = ({ spotType, updateFilter }) => (
@@ -10,6 +10,7 @@ const FilterForm = ({ spotType, updateFilter }) => (
             <input type="button" value='RVs' onClick={handleChange('spotType', updateFilter)}/>
             <input type="button" value='Campsites' onClick={handleChange('spotType', updateFilter)} />
             <input type="button" value='Lodging' onClick={handleChange('spotType', updateFilter)} />
+            <input type="button" value='All listings' onClick={handleChange('spotType', updateFilter)} />
         </nav>
     </div>
 )

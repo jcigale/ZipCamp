@@ -27,8 +27,8 @@ export const createReview = review => dispatch => (
   ))
 )
 
-export const fetchSpots = () => dispatch => (
-    APIUtil.fetchSpots().then(spots => (dispatch(receiveSpots(spots))))
+export const fetchSpots = (filters) => dispatch => (
+    APIUtil.fetchSpots(filters).then(spots => (dispatch(receiveSpots(spots))))
 )
 
 export const fetchSpot = id => dispatch => (
