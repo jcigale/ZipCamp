@@ -40,7 +40,7 @@ s3 = Spot.create({
     longitude:'-74.44109006164943',
     latitude:'43.965291487508935',
     photo_url: 'https://p.rdcpix.com/v01/l0be8b143-m0xd-w1020_h770_q80.jpg',
-    spot_type:'Glamping',
+    spot_type:'Lodging',
     details: {1=>2},
     activities: ['swimming'],
     price: 180})

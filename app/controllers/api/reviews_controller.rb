@@ -16,7 +16,7 @@ class Api::ReviewsController < ApplicationController
     end
 
     def update
-        @review = Reveiw.find(params[:id])
+        @review = Review.find(params[:id])
         if @review.update(review_params)
             render "api/spots/#{@review.spot_id}"
         else

@@ -1,6 +1,6 @@
 json.spot do
-    json.partial! '/api/spots/spot', spot: @spot
     json.reviewIds @spot.reviews.pluck(:id)
+    json.partial! '/api/spots/spot', spot: @spot
 end
 
 @spot.reviews.includes(:author).each do |review|
