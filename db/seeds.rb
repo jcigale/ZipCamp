@@ -12,6 +12,7 @@ Booking.delete_all
 
 
 demoUser = User.create({first_name: 'Demo', last_name: 'User', email: 'demo@gmail.com', zipcode: 12345, password: '12345678'}) 
+
 s1 = Spot.create({
     title: 'Hoss Campground',
     description:'Beautiful campground with a dozen spots right by the lake and close to town!',
