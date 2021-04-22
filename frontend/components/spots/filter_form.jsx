@@ -11,6 +11,12 @@ const FilterForm = ({ spotType, updateFilter }) => (
             <input type="button" value='Campsites' onClick={handleChange('spotType', updateFilter)} />
             <input type="button" value='Lodging' onClick={handleChange('spotType', updateFilter)} />
             <input type="button" value='All listings' onClick={handleChange('spotType', updateFilter)} />
+            <input
+                id="pac-input"
+                class="controls"
+                type="text"
+                placeholder="Search Box"
+            />
         </nav>
     </div>
 )
