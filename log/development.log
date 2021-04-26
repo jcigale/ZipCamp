@@ -29431,3 +29431,46 @@ Processing by Api::SpotsController#index as JSON
 Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/" for ::1 at 2021-04-26 11:05:13 -0400
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jcigale/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MASQcntzC5VxR0qjO_EcYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (57.5ms)
+Completed 200 OK in 1277ms (Views: 1248.0ms | ActiveRecord: 27.5ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-04-26 11:05:15 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (11.4ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (26.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 25], ["spot_id", 26], ["spot_id", 27], ["spot_id", 28], ["spot_id", 29], ["spot_id", 30], ["spot_id", 31], ["spot_id", 32], ["spot_id", 33], ["spot_id", 34]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.5ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/index.json.jbuilder (114.0ms)
+Completed 200 OK in 158ms (Views: 71.4ms | ActiveRecord: 62.9ms)
+
+
+Started GET "/" for ::1 at 2021-04-26 11:10:26 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MASQcntzC5VxR0qjO_EcYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 261ms (Views: 256.1ms | ActiveRecord: 3.7ms)
+
+
