@@ -123,3 +123,83 @@ s10 = Spot.create({
     details: {1=>2},
     activities: ['swimming'],
     price: 199})
+
+Review.create({
+    title: 'good time',
+    body: 'we had a good time at this location',
+    recommended: true,
+    author_id: demoUser.id,
+    spot_id: s1.id
+})
+
+Review.create({
+    title: 'good time',
+    body: 'we had a good time at this location',
+    recommended: true,
+    author_id: demoUser.id,
+    spot_id: s2.id
+})
+
+Review.create({
+    title: 'good time',
+    body: 'we had a good time at this location',
+    recommended: true,
+    author_id: demoUser.id,
+    spot_id: s3.id
+})
+
+Review.create({
+    title: 'good time',
+    body: 'we had a good time at this location',
+    recommended: true,
+    author_id: demoUser.id,
+    spot_id: s4.id
+})
+
+Review.create({
+    title: 'good time',
+    body: 'we had a good time at this location',
+    recommended: true,
+    author_id: demoUser.id,
+    spot_id: s5.id
+})
+
+Review.create({
+    title: 'good time',
+    body: 'we had a good time at this location',
+    recommended: true,
+    author_id: demoUser.id,
+    spot_id: s6.id
+})
+
+Review.create({
+    title: 'good time',
+    body: 'we had a good time at this location',
+    recommended: true,
+    author_id: demoUser.id,
+    spot_id: s7.id
+})
+
+Review.create({
+    title: 'good time',
+    body: 'we had a good time at this location',
+    recommended: true,
+    author_id: demoUser.id,
+    spot_id: s8.id
+})
+
+Review.create({
+    title: 'good time',
+    body: 'we had a good time at this location',
+    recommended: true,
+    author_id: demoUser.id,
+    spot_id: s9.id
+})
+
+Review.create({
+    title: 'good time',
+    body: 'we had a good time at this location',
+    recommended: true,
+    author_id: demoUser.id,
+    spot_id: s10.id
+})

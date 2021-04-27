@@ -29474,3 +29474,516 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 261ms (Views: 256.1ms | ActiveRecord: 3.7ms)
 
 
+Started GET "/" for ::1 at 2021-04-26 11:16:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MASQcntzC5VxR0qjO_EcYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 59ms (Views: 53.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-26 11:17:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MASQcntzC5VxR0qjO_EcYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 36ms (Views: 32.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-04-27 09:35:33 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (12.5ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (20.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 25], ["spot_id", 26], ["spot_id", 27], ["spot_id", 28], ["spot_id", 29], ["spot_id", 30], ["spot_id", 31], ["spot_id", 32], ["spot_id", 33], ["spot_id", 34]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (1.5ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/index.json.jbuilder (55.9ms)
+Completed 200 OK in 66ms (Views: 27.0ms | ActiveRecord: 32.9ms)
+
+
+Started GET "/" for ::1 at 2021-04-27 09:35:42 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MASQcntzC5VxR0qjO_EcYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 56ms (Views: 49.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-04-27 09:35:42 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (1.6ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (3.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 25], ["spot_id", 26], ["spot_id", 27], ["spot_id", 28], ["spot_id", 29], ["spot_id", 30], ["spot_id", 31], ["spot_id", 32], ["spot_id", 33], ["spot_id", 34]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.8ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/index.json.jbuilder (39.5ms)
+Completed 200 OK in 43ms (Views: 37.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for ::1 at 2021-04-27 09:36:28 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MASQcntzC5VxR0qjO_EcYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2021-04-27 09:37:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MASQcntzC5VxR0qjO_EcYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2021-04-27 09:37:26 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MASQcntzC5VxR0qjO_EcYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-04-27 09:37:27 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (1.2ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 25], ["spot_id", 26], ["spot_id", 27], ["spot_id", 28], ["spot_id", 29], ["spot_id", 30], ["spot_id", 31], ["spot_id", 32], ["spot_id", 33], ["spot_id", 34]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.3ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/index.json.jbuilder (25.5ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-04-27 09:37:32 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (5.4ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 25], ["spot_id", 26], ["spot_id", 27], ["spot_id", 28], ["spot_id", 29], ["spot_id", 30], ["spot_id", 31], ["spot_id", 32], ["spot_id", 33], ["spot_id", 34]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.7ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/index.json.jbuilder (19.5ms)
+Completed 200 OK in 26ms (Views: 19.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-04-27 09:37:32 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (1.2ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 25], ["spot_id", 26], ["spot_id", 27], ["spot_id", 28], ["spot_id", 29], ["spot_id", 30], ["spot_id", 31], ["spot_id", 32], ["spot_id", 33], ["spot_id", 34]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.9ms)
+  Rendered api/spots/_spot.json.jbuilder (0.3ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/index.json.jbuilder (21.7ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-04-27 09:37:32 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (7.1ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (7.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 25], ["spot_id", 26], ["spot_id", 27], ["spot_id", 28], ["spot_id", 29], ["spot_id", 30], ["spot_id", 31], ["spot_id", 32], ["spot_id", 33], ["spot_id", 34]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (2.7ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/index.json.jbuilder (31.3ms)
+Completed 200 OK in 34ms (Views: 19.1ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-04-27 09:37:32 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (1.0ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 25], ["spot_id", 26], ["spot_id", 27], ["spot_id", 28], ["spot_id", 29], ["spot_id", 30], ["spot_id", 31], ["spot_id", 32], ["spot_id", 33], ["spot_id", 34]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.5ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/index.json.jbuilder (16.7ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-04-27 09:37:32 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (1.3ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (2.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 25], ["spot_id", 26], ["spot_id", 27], ["spot_id", 28], ["spot_id", 29], ["spot_id", 30], ["spot_id", 31], ["spot_id", 32], ["spot_id", 33], ["spot_id", 34]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.5ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.3ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.0ms)
+  Rendered api/spots/index.json.jbuilder (15.9ms)
+Completed 200 OK in 19ms (Views: 14.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-04-27 09:37:33 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (1.0ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 25], ["spot_id", 26], ["spot_id", 27], ["spot_id", 28], ["spot_id", 29], ["spot_id", 30], ["spot_id", 31], ["spot_id", 32], ["spot_id", 33], ["spot_id", 34]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.5ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/index.json.jbuilder (26.7ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2021-04-27 09:38:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MASQcntzC5VxR0qjO_EcYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-04-27 09:38:11 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (0.7ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (3.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 25], ["spot_id", 26], ["spot_id", 27], ["spot_id", 28], ["spot_id", 29], ["spot_id", 30], ["spot_id", 31], ["spot_id", 32], ["spot_id", 33], ["spot_id", 34]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.6ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/index.json.jbuilder (33.0ms)
+Completed 200 OK in 35ms (Views: 30.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for ::1 at 2021-04-27 09:39:23 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MASQcntzC5VxR0qjO_EcYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 299ms (Views: 297.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-04-27 09:39:28 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (0.6ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 25], ["spot_id", 26], ["spot_id", 27], ["spot_id", 28], ["spot_id", 29], ["spot_id", 30], ["spot_id", 31], ["spot_id", 32], ["spot_id", 33], ["spot_id", 34]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.5ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/index.json.jbuilder (12.7ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2021-04-27 09:40:43 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MASQcntzC5VxR0qjO_EcYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 275ms (Views: 272.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-27 09:40:53 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MASQcntzC5VxR0qjO_EcYA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 53ms (Views: 50.7ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (10.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:8
+  [1m[36mSpot Destroy (3.2ms)[0m  [1m[31mDELETE FROM "spots"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mReview Destroy (5.2ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBooking Destroy (6.6ms)[0m  [1m[31mDELETE FROM "bookings"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "0rPhFeFxx3SxyZY8oUpcqg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "0rPhFeFxx3SxyZY8oUpcqg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (6.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "zipcode", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Demo"], ["last_name", "User"], ["email", "demo@gmail.com"], ["zipcode", 12345], ["password_digest", "$2a$12$KVBe6JymjcmM1OGtxFMxS.8xaujkX3pokaUYYqrU1qyzK93bVQMCe"], ["session_token", "0rPhFeFxx3SxyZY8oUpcqg"], ["created_at", "2021-04-27 13:45:54.900388"], ["updated_at", "2021-04-27 13:45:54.900388"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mSpot Create (2.2ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Beautiful campground with a dozen spots right by the lake and close to town!"], ["longitude", "-74.41991"], ["latitude", "43.96848"], ["spot_type", "RVs"], ["details", "---\n1: 2\n"], ["activities", "---\n- swimming\n"], ["created_at", "2021-04-27 13:45:54.924631"], ["updated_at", "2021-04-27 13:45:54.924631"], ["photo_url", "https://assets.simpleviewinc.com/simpleview/image/fetch/q_75/https://assets.simpleviewinc.com/simpleview/image/upload/crm/newyorkstate/Hosses_Campground0_b24da16b-9d26-5573-a68af1abbbbba572.jpg"], ["title", "Hoss Campground"], ["price", 80]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mSpot Create (0.4ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Beautiful secluded site to pitch a tent in the woods!"], ["longitude", "-74.5612049"], ["latitude", "43.8608342"], ["spot_type", "Campsite"], ["details", "---\n1: 2\n"], ["activities", "---\n- swimming\n"], ["created_at", "2021-04-27 13:45:54.928294"], ["updated_at", "2021-04-27 13:45:54.928294"], ["photo_url", "http://www.therelativeobserver.com/wp-content/uploads/2018/08/SMP.jpg"], ["title", "Sargent Pond"], ["price", 22]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mSpot Create (0.4ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Spacious house for the family to spend a week up at the lake!"], ["longitude", "-74.44109006164943"], ["latitude", "43.965291487508935"], ["spot_type", "Lodging"], ["details", "---\n1: 2\n"], ["activities", "---\n- swimming\n"], ["created_at", "2021-04-27 13:45:54.929912"], ["updated_at", "2021-04-27 13:45:54.929912"], ["photo_url", "https://p.rdcpix.com/v01/l0be8b143-m0xd-w1020_h770_q80.jpg"], ["title", "Abenaki House"], ["price", 180]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mSpot Create (0.5ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Nice spot to pitch a tent very close to a beautiful mountain!"], ["longitude", "-74.4527724"], ["latitude", "43.9643133"], ["spot_type", "Campsite"], ["details", "---\n1: 2\n"], ["activities", "---\n- swimming\n"], ["created_at", "2021-04-27 13:45:54.931334"], ["updated_at", "2021-04-27 13:45:54.931334"], ["photo_url", "https://cdn.shopify.com/s/files/1/0817/7807/files/OwlsHead_Adirondacks_grande.jpg?10623345405295115173"], ["title", "Owls Head"], ["price", 28]]
+  ↳ db/seeds.rb:49
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mSpot Create (0.4ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Located in Yellowstone National Park, Old Faithful Inn - Inside the Park is in the mountains and in a national park. The areas natural beauty can be seen at Old Faithful and Grand Prismatic Spring. Be sure not to miss outdoor adventures like hiking/biking trails and ecotours, or hop on a bike rental nearby and take a self-guided tour around Yellowstone National Park."], ["longitude", "-110.3979311"], ["latitude", "44.4599892"], ["spot_type", "Lodging"], ["details", "---\n1: 2\n"], ["activities", "---\n- swimming\n"], ["created_at", "2021-04-27 13:45:54.932969"], ["updated_at", "2021-04-27 13:45:54.932969"], ["photo_url", "https://images.goodsam.com/trailerlifedirectory/largefeatured/1000x/pho_300006485_01.jpg"], ["title", "Old Faithful Inn"], ["price", 218]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mSpot Create (0.4ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Less than 25 miles north of Boston and <5 miles from the interstate, Lorraine Park campground at Harold Parker State Forest provides ample on-site activities and also serves as a jumping off point for exploring the Massachusetts coast north of Boston or a stop en route to NH and Maine."], ["longitude", "-71.28248423125"], ["latitude", "42.43240290482139"], ["spot_type", "Campsite"], ["details", "---\n1: 2\n"], ["activities", "---\n- swimming\n"], ["created_at", "2021-04-27 13:45:54.934321"], ["updated_at", "2021-04-27 13:45:54.934321"], ["photo_url", "https://media-cdn.tripadvisor.com/media/photo-s/04/4d/ea/63/lorraine-park-campground.jpg"], ["title", "Loraine Park"], ["price", 56]]
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:82
+  [1m[36mSpot Create (0.7ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Nice spot to pitch a tent very close to a beautiful mountain!"], ["longitude", "-71.2831756"], ["latitude", "42.040577"], ["spot_type", "Campsite, RVs, Lodging"], ["details", "---\n1: 2\n"], ["activities", "---\n- swimming\n"], ["created_at", "2021-04-27 13:45:54.935632"], ["updated_at", "2021-04-27 13:45:54.935632"], ["photo_url", "https://images.goodsam.com/trailerlifedirectory/largefeatured/1000x/pho_300006485_01.jpg"], ["title", "Normandy Farms Camping"], ["price", 56]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:93
+  [1m[36mSpot Create (0.3ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Camping near Stowe, Vermont. Offering open, grassy and full hookup RV sites that back up to the woods, and tent sites that overlook the Lamoille River."], ["longitude", "-72.53643"], ["latitude", "44.568742"], ["spot_type", "Campsite, RVs"], ["details", "---\n1: 2\n"], ["activities", "---\n- swimming\n"], ["created_at", "2021-04-27 13:45:54.937346"], ["updated_at", "2021-04-27 13:45:54.937346"], ["photo_url", "https://www.roverpass.com/system/pictures/images/000/025/935/full/mountain-view-campground-morrisville-vt-5.JPG?1487437117"], ["title", "Mountain View Campground"], ["price", 54]]
+  ↳ db/seeds.rb:93
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:93
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:105
+  [1m[36mSpot Create (0.5ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Located on the southwest shore of Yellowstone Lake, the Grant Village Campground is situated at an elevation of approximately 7,800 feet in a lodgepole pine forest, just a few miles from the enchanting West Thumb Geyser Basin. This geyser basin is located on the shore of the lake, with an easily navigated boardwalk and trail system providing terrific views of the various hot springs and thermal features. The campground offers a relaxing setting with easy access to many services and amenities. Grant Village Campground is just over 40 miles from Colter Bay."], ["longitude", "-110.5662405"], ["latitude", "44.3953541"], ["spot_type", "Campsite, RVs"], ["details", "---\n1: 2\n"], ["activities", "---\n- swimming\n"], ["created_at", "2021-04-27 13:45:54.938828"], ["updated_at", "2021-04-27 13:45:54.938828"], ["photo_url", "https://www.nps.gov/common/uploads/grid_builder/yell/crop16_9/13266D98-1DD8-B71B-0BE23ADC28F89F3F.jpg?width=465&quality=90&mode=crop"], ["title", "Grant Village Campground"], ["price", 74]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:116
+  [1m[36mSpot Create (0.8ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Against the breathtaking backdrop of New England’s Green Mountains, Stowe Vermont’s allure arrives unforgettably at Topnotch Resort. Tucked into a 120-acre wooded glade at the foothills of Mount Mansfield, Topnotch is a grand definition of mountain spirit, a sophisticated gem where alpine luxury is served on an intimate scale. Wrap yourself in the warm hospitality that has made this resort and spa a mountain destination for decades – the ideal basecamp for Stowe’s exhilarating four-season adventures."], ["longitude", "-72.7387608"], ["latitude", "44.4945508"], ["spot_type", "Campsite"], ["details", "---\n1: 2\n"], ["activities", "---\n- swimming\n"], ["created_at", "2021-04-27 13:45:54.940356"], ["updated_at", "2021-04-27 13:45:54.940356"], ["photo_url", "https://media-cdn.tripadvisor.com/media/photo-s/04/4c/ac/7a/the-new-topnotch-resort.jpg"], ["title", "Topnotch Resort"], ["price", 199]]
+  ↳ db/seeds.rb:116
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:116
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:127
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:127
+  [1m[36mSpot Load (4.6ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ db/seeds.rb:127
+  [1m[36mReview Create (2.2ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 18], ["spot_id", 35], ["created_at", "2021-04-27 13:45:54.970514"], ["updated_at", "2021-04-27 13:45:54.970514"]]
+  ↳ db/seeds.rb:127
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:127
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:135
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:135
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ db/seeds.rb:135
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 18], ["spot_id", 36], ["created_at", "2021-04-27 13:45:54.974731"], ["updated_at", "2021-04-27 13:45:54.974731"]]
+  ↳ db/seeds.rb:135
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:135
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:143
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:143
+  [1m[36mSpot Load (0.4ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ db/seeds.rb:143
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 18], ["spot_id", 37], ["created_at", "2021-04-27 13:45:54.980650"], ["updated_at", "2021-04-27 13:45:54.980650"]]
+  ↳ db/seeds.rb:143
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:143
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:151
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:151
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ db/seeds.rb:151
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 18], ["spot_id", 38], ["created_at", "2021-04-27 13:45:54.983013"], ["updated_at", "2021-04-27 13:45:54.983013"]]
+  ↳ db/seeds.rb:151
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:151
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:159
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:159
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ db/seeds.rb:159
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 18], ["spot_id", 39], ["created_at", "2021-04-27 13:45:54.985157"], ["updated_at", "2021-04-27 13:45:54.985157"]]
+  ↳ db/seeds.rb:159
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:159
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:167
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[36mSpot Load (0.4ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 18], ["spot_id", 40], ["created_at", "2021-04-27 13:45:54.987299"], ["updated_at", "2021-04-27 13:45:54.987299"]]
+  ↳ db/seeds.rb:167
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:167
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:175
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:175
+  [1m[36mSpot Load (0.1ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:175
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 18], ["spot_id", 41], ["created_at", "2021-04-27 13:45:54.989278"], ["updated_at", "2021-04-27 13:45:54.989278"]]
+  ↳ db/seeds.rb:175
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:175
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:183
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:183
+  [1m[36mSpot Load (0.1ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ db/seeds.rb:183
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 18], ["spot_id", 42], ["created_at", "2021-04-27 13:45:54.991198"], ["updated_at", "2021-04-27 13:45:54.991198"]]
+  ↳ db/seeds.rb:183
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:183
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:191
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:191
+  [1m[36mSpot Load (0.1ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ db/seeds.rb:191
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 18], ["spot_id", 43], ["created_at", "2021-04-27 13:45:54.993006"], ["updated_at", "2021-04-27 13:45:54.993006"]]
+  ↳ db/seeds.rb:191
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:191
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:199
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:199
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ db/seeds.rb:199
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 18], ["spot_id", 44], ["created_at", "2021-04-27 13:45:54.994838"], ["updated_at", "2021-04-27 13:45:54.994838"]]
+  ↳ db/seeds.rb:199
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:199

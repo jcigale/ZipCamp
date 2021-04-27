@@ -7,8 +7,6 @@ const SpotIndex = ({ spots, spotType }) => {
     //     if (spotType === 'All Listings') return spots; 
     //     return spots.filter(spot => spot.spotType === spotType)
     // }
-    
-    console.log(spots);
     return(
     <div className='spots'>
             {spots.map(spot => (

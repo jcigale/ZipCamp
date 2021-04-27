@@ -10,11 +10,10 @@
     <script type='text/javascript'>
       window.logo = "<%=image_url('logo.png')%>"
     </script>
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyAHXcFEDgJwTeQrfOwbpWkhjaXwmoIQy9I&libraries=places&callback=initMap" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyAHXcFEDgJwTeQrfOwbpWkhjaXwmoIQy9I" %>
+    <%# &libraries=places&callback=initMap %>
     <%= favicon_link_tag 'favicon.ico' %>
-    <%# <script async
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHXcFEDgJwTeQrfOwbpWkhjaXwmoIQy9I&libraries=places&callback=initMap"> %>
-    <%# </script> %>
+    
   </head>
 
   <body>
