@@ -5,7 +5,13 @@ const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
         <nav className='nav-bar'>
             <div className='left-nav'>
-                <Link to='/'><img src={logo} alt="logo" /></Link>  
+                <Link to='/'><img src={logo} alt="logo" /></Link>
+                <input
+                    id="pac-input"
+                    className="controls"
+                    type="text"
+                    placeholder="Search Box"
+                />
             </div>
             <div className='right-nav'>
                 <div><Link to='/login' style={{textDecoration: 'none'}}><span>Log In</span></Link></div>
@@ -17,6 +23,12 @@ const Greeting = ({ currentUser, logout }) => {
         <nav className='nav-bar'>
             <div className='left-nav'>
                 <Link to='/'><img src={logo} alt="logo" /></Link>
+                <input
+                    id="pac-input"
+                    className="controls"
+                    type="text"
+                    placeholder="Search Box"
+                />
                 
             </div>
             <div className='right-nav'>

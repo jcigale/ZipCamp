@@ -5,11 +5,19 @@
 }
 
 .left-nav {
+    display: flex;
     margin-left: 20px;
-    
+    align-items: center;
     img {
         height: auto;
         width: 140px;
+    }
+
+    input {
+        // background: url("http://kodyrabatowe.wp.pl/img/ico/search_gr.png") top left no-repeat;
+        height:30px;
+        margin-left: 20px;
+        // padding-left:25px;
     }
 }
 
