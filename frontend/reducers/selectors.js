@@ -7,7 +7,8 @@ export const selectSpot = ({ spots }, spotId) => {
     return spots[spotId] || { reviewIds: [] };
 }
 
-export const selectReviews = ({ spots, reviews }, spot) => {
+export const selectReviews = ({ reviews }, spot) => {
     debugger
-    return spot.reviewIds.map(reviewId => reviews[reviewId]);
+    return spot.reviewIds.map(
+        reviewId => reviews[reviewId]);
 }
