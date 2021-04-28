@@ -10,8 +10,12 @@ const reviewList = (reviews) => (
 const SpotDetail = ({ spot, reviews }) => {
     return (
         <div>
+        <img src={spot.photo_url} />
+        <div className='spot-detail'>
             <span className='location'>United States &gt; New York &gt; {spot.title}</span>
-            <h2>{spot.title}</h2>
+            <h2 className='title'>{spot.title}</h2>
+            <span className='rec'><i className="fas fa-thumbs-up"><span> 100%</span></i> Recommened</span>
+            <div className='firstborder'></div>
             <div>hosted by: Demo User</div>
             <span>{spot.description}</span>
             <div className='details'>
@@ -41,7 +45,7 @@ const SpotDetail = ({ spot, reviews }) => {
 
             {reviewList(reviews)}
         </div>
-
+        </div>
 
     )
 }

@@ -13,8 +13,7 @@ const FilterForm = ({ spotType, updateFilter }) => (
             <button value='RVs' onClick={handleChange('spotType', updateFilter)}><i className={icons['rv']}></i> RVs</button>
             <button value='Campsite' onClick={handleChange('spotType', updateFilter)}><i className={icons['tent']}></i> Campsites</button>
             <button value='Lodging' onClick={handleChange('spotType', updateFilter)}><i className={icons['lodging']}></i> Lodging</button>
-            <button value='All' onClick={handleChange('spotType', updateFilter)}>All listings</button>
-            
+            <button value='All' onClick={handleChange('spotType', updateFilter)}>All listings</button>  
         </nav>
     </div>
 )

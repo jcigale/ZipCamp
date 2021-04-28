@@ -3,6 +3,7 @@ import * as APIUtil from '../util/spot_api_util';
 export const RECEIVE_SPOTS = 'RECEIVE_SPOTS';
 export const RECEIVE_SPOT = 'RECEIVE_SPOT';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
+export const RECEIVE_BOOKING = 'RECEIVE_BOOKING';
 
 export const receiveSpots = spots => ({
     type: RECEIVE_SPOTS,
@@ -21,10 +22,22 @@ export const receiveReview = ({ review, author }) => ({
     author,
 })
 
+export const receiveBooking = ({ booking, user }) => ({
+    type: RECEIVE_BOOKING,
+    booking,
+    user,
+})
+
 export const createReview = review => dispatch => (
     APIUtil.createReview(review).then(review => (
     dispatch(receiveReview(review))
   ))
+)
+
+export const createBooking = booking => dispatch => (
+    APIUtil.createBooking(booking.then(review => (
+        dispatch(receiveBooking(booking))
+    )))
 )
 
 export const fetchSpots = (filters) => dispatch => (
