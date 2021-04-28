@@ -1,4 +1,7 @@
 import React from 'react';
+import { icons } from '../../util/icon_hash'
+
+
 
 const handleChange = (filter, updateFilter) => e => (
     updateFilter(filter, e.currentTarget.value)
@@ -7,10 +10,10 @@ const handleChange = (filter, updateFilter) => e => (
 const FilterForm = ({ spotType, updateFilter }) => (
     <div>
         <nav className='filter-nav'>
-            <input type="button" value='RVs' onClick={handleChange('spotType', updateFilter)}/>
-            <input type="button" value='Campsites' onClick={handleChange('spotType', updateFilter)} />
-            <input type="button" value='Lodging' onClick={handleChange('spotType', updateFilter)} />
-            <input type="button" value='All listings' onClick={handleChange('spotType', updateFilter)} />
+            <button value='RVs' onClick={handleChange('spotType', updateFilter)}><i className={icons['rv']}></i> RVs</button>
+            <button value='Campsite' onClick={handleChange('spotType', updateFilter)}><i className={icons['tent']}></i> Campsites</button>
+            <button value='Lodging' onClick={handleChange('spotType', updateFilter)}><i className={icons['lodging']}></i> Lodging</button>
+            <button value='All' onClick={handleChange('spotType', updateFilter)}>All listings</button>
             
         </nav>
     </div>
