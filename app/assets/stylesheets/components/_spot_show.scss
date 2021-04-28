@@ -55,8 +55,16 @@
             border-bottom: 1px solid lightgray;
             width: 100%
         }
-
-
     }
+}
 
+.booking-form {
+    position: fixed;
+    background: white;
+    border: 3px solid lightgray;
+    margin-left: 70%;
+    height: 285px;
+    width: 317px;
+    bottom: 10px;
+    border-radius: 3px;
 }

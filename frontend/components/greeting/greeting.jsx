@@ -14,6 +14,8 @@ const Greeting = ({ currentUser, logout }) => {
                 />
             </div>
             <div className='right-nav'>
+                <a href="https://www.linkedin.com/in/john-c-467b21ba/" target="_blank"><i className="fab fa-linkedin"></i></a>
+                <a href="https://github.com/jcigale" target="_blank"><i className="fab fa-github"></i></a>
                 <div><Link to='/login' style={{textDecoration: 'none'}}><span>Log In</span></Link></div>
                 <div><Link to='/signup' style={{ textDecoration: 'none' }} className='js-modal-open'><span>Sign Up</span></Link></div>
             </div>
@@ -32,6 +34,8 @@ const Greeting = ({ currentUser, logout }) => {
                 
             </div>
             <div className='right-nav'>
+                <a href="https://www.linkedin.com/in/john-c-467b21ba/" target="_blank"><i className="fab fa-linkedin"></i></a>
+                <a href="https://github.com/jcigale" target="_blank"><i className="fab fa-github"></i></a>
                 <button className="header-button" onClick={logout}><span>Log Out</span></button>
             </div>
         </nav>
