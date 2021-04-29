@@ -18,19 +18,33 @@ const SpotDetail = ({ spot, reviews }) => {
             <span className='location'>United States &gt; New York &gt; {spot.title}</span>
             <h2 className='title'>{spot.title}</h2>
             <span className='rec'><i className="fas fa-thumbs-up"><span> 100%</span></i> Recommened</span>
-            <div className='firstborder'></div>
+            <div className='border'></div>
             <div className='sec1'>
-                <div>hosted by: Demo User</div>
+                <div className='host'>
+                    <img src={demoHead}/>
+                    <div>
+                    <span>hosted by</span>
+                    <p>Demo User</p>
+                    </div>
+                </div>
+
                 <div className='text'>
                     <span className='covid'>This host has self-certified that Hipcamp’s COVID-19 Safety Standards have been implemented at this listing. See what’s being done <a href='http://beesbeesbees.com/'>here</a>.</span>
                     <span className='desc'>{spot.description}</span>
                 </div>
             </div>
             <div className='details'>
-                <h2>Campsite Area</h2>
+                <div className='essentials'>
                 <h2>Essentials</h2>
+                </div>
+                <div className='ammenities'>
                 <h2>Ammentities</h2>
+                </div>
+                <div clasName='activities'>
+                <h2>Activites</h2>
+                </div>
             </div>
+            <div className="border"></div>
             
 
             <div className='checkin'>
