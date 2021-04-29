@@ -10,7 +10,7 @@ const reviewList = (reviews) => (
 const SpotDetail = ({ spot, reviews }) => {
     return (
         <div>
-        <img src={spot.photo_url} />
+            <div className='img-back'><img src={spot.photo_url} /></div>
         <div className='spot-detail'>
             <span className='location'>United States &gt; New York &gt; {spot.title}</span>
             <h2 className='title'>{spot.title}</h2>

@@ -1,10 +1,16 @@
 .spot-show{
+
+    .img-back {
+         width: 100%;
+         background: #ededed;
+         margin-bottom: 25px;
+     }
+
     img{
         margin-left: 20%;
         margin-right: 10%;
         width:60%;
         height: auto;
-        padding-bottom: 25px;
     }
     .spot-detail{
         width:50%;
@@ -55,16 +61,69 @@
             border-bottom: 1px solid lightgray;
             width: 100%
         }
+
+       
     }
 }
 
 .booking-form {
     position: fixed;
     background: white;
-    border: 3px solid lightgray;
+    border: 2px solid #ebebeb;
     margin-left: 70%;
     height: 285px;
     width: 317px;
     bottom: 10px;
     border-radius: 3px;
+
+    > div {
+        height: 70px;
+        border-bottom: 2px solid #ebebeb;
+        width: 100%;
+        display: flex;
+    }
+
+    .in {
+        border-right: 2px solid #ebebeb;
+    }
+
+    .in:hover, .out:hover, .guests:hover {
+        background: #FDFDFD
+    }
+
+    .sub {
+        button {
+            margin: 10px;
+            background: #40d9ac;
+            width: 100%;
+            border: none;
+            color: #fff;
+            font-family: Calibre,
+            Helvetica,
+            Arial,
+            sans-serif;
+            font-size: 19px;
+            font-weight: 500;
+        }
+
+        button:hover {
+            border: 3px solid #40d9ac;
+            background: #FFF;
+            color: #40d9ac;
+        }
+    }
+
+    .dates {
+        input {
+            border: none;
+        }
+    }
+
+    .guests {
+        flex-direction: column;
+
+        select {
+            border: none
+        }
+    }
 }

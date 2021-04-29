@@ -27,15 +27,15 @@ class BookingForm extends React.Component {
         return (
             <div className='booking-form'>
                 <form onSubmit={this.handleSubmit}></form>
-                <span>${this.props.spot.price}</span>
+                <div className='price'><span>${this.props.spot.price}</span></div>
                 <div className='dates'>
                     <div className='in'>
                         <label>Check in</label>
-                        <input type="date"/>
+                        <input type="date" placeholder='Select date'/>
                     </div>
                     <div className='out'>
                         <label>Check out</label>
-                        <input type="date" />
+                        <input type="date" placeholder='Select date'/>
                     </div>
                 </div>
                 <div className='guests'>

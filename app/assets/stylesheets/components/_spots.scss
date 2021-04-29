@@ -19,7 +19,7 @@
         font-weight: 300;
         padding: 9px 7px;
         background: #FFFFFF;
-        border: .5px solid gray;
+        border: .5px solid #EBEBEB;
         border-radius: 2px;
         margin-right: 10px;
         
@@ -31,9 +31,12 @@
     display: flex;
     flex-direction: row;
     .map {
-        position: fixed;
+        position: sticky !important;
+        left: 50%;
         width: 50%;
-        height: 800px;
+        height: 700px;
+        top: 0;
+        
     }
     .spots {
         display: flex;
