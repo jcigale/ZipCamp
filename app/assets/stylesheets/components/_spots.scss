@@ -44,6 +44,10 @@
         width: 50%;
         height: 100%;
 
+        .spot-index-item:hover {
+            cursor: pointer;
+        }
+        
         .spot-index-item {
             margin: 20px;
             

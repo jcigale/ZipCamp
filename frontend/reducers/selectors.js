@@ -8,7 +8,7 @@ export const selectSpot = ({ spots }, spotId) => {
 }
 
 export const selectReviews = ({ reviews }, spot) => {
-    //debugger
+    ////debugger
     return spot.reviewIds.map(
         reviewId => reviews[reviewId]);
 }

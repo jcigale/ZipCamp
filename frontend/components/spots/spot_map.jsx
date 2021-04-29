@@ -17,7 +17,7 @@ class SpotMap extends React.Component {
     //     const map = this.refs.map;
     //     const input = document.getElementById("pac-input");
     //     const searchBox = new google.maps.places.SearchBox(input);
-    //     debugger
+    //     //debugger
     //     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
     //     // Bias the SearchBox results towards current map's viewport.
     //     map.addListener("bounds_changed", () => {

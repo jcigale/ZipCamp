@@ -14,7 +14,6 @@ class SpotIndexItem extends React.Component{
 
     render() {
         const {photo_url, spot_type, title, price } = this.props.spot;
-        
         return (
             <div className='spot-index-item' onClick={this.handleClick} >
                 <img src={photo_url}/>

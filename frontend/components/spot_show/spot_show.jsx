@@ -4,9 +4,11 @@ import BookingForm from './booking_form';
 
 
 const SpotShow = ({ spot, reviews }) => {
+
+
     return (
         <div className='spot-show'>
-            <SpotDetail spot={spot} reviews={reviews}/>
+            <SpotDetail  spot={spot} reviews={reviews}/>
             <BookingForm spot={spot} />
         </div>
     )

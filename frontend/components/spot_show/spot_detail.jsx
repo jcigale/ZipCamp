@@ -7,7 +7,10 @@ const reviewList = (reviews) => (
     ))
 )
 
+
+
 const SpotDetail = ({ spot, reviews }) => {
+    debugger
     return (
         <div>
             <div className='img-back'><img src={spot.photo_url} /></div>
@@ -16,8 +19,13 @@ const SpotDetail = ({ spot, reviews }) => {
             <h2 className='title'>{spot.title}</h2>
             <span className='rec'><i className="fas fa-thumbs-up"><span> 100%</span></i> Recommened</span>
             <div className='firstborder'></div>
-            <div>hosted by: Demo User</div>
-            <span>{spot.description}</span>
+            <div className='sec1'>
+                <div>hosted by: Demo User</div>
+                <div className='text'>
+                    <span className='covid'>This host has self-certified that Hipcamp’s COVID-19 Safety Standards have been implemented at this listing. See what’s being done <a href='http://beesbeesbees.com/'>here</a>.</span>
+                    <span className='desc'>{spot.description}</span>
+                </div>
+            </div>
             <div className='details'>
                 <h2>Campsite Area</h2>
                 <h2>Essentials</h2>
