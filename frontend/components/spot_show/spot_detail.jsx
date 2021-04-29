@@ -48,7 +48,7 @@ const SpotDetail = ({ spot, reviews }) => {
             
 
             <div className='checkin'>
-                <h4>details</h4>
+                <div>details</div>
                 <div>
                     <span><b>Check in:</b> After 2PM</span>
                     <span><b>Check out:</b> Before 12PM</span>
@@ -57,13 +57,11 @@ const SpotDetail = ({ spot, reviews }) => {
                 <div>
                     <span><b>On arrival:</b> Go straight to camp</span>
                     <span><b>Minimum nights:</b> 1</span>
-                    <span><b>Accapts bookings:</b> 6 months out</span>
+                    <span><b>Accepts bookings:</b> 6 months out</span>
                 </div>
             </div>
 
-            <div className='activities'>
-                <h2>Activities</h2>
-            </div>
+            
 
             {reviewList(reviews)}
         </div>

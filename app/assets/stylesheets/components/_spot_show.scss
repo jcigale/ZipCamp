@@ -187,3 +187,28 @@
         border-radius: 2px;
     }
 }
+
+.checkin {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Calibre",
+    Helvetica,
+    Arial,
+    sans-serif;
+    ;
+
+    span{
+        padding-bottom: 5px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    b {
+        font-weight: 600;
+    }
+}
