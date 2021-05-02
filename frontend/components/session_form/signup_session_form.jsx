@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 
 class SignupSessionForm extends React.Component {
@@ -47,7 +48,9 @@ class SignupSessionForm extends React.Component {
     render() {
         return (
             <div className='signup-form-container is-open'>
-                <div className='screen js-modal-close'></div>
+                <Link to='/' style={{ textDecoration: 'none' }}>
+                    <div className='screen js-modal-close'></div>
+                </Link>
                 <div className='signup-module'>
                     <h2>Join Zipcamp
                     <br/>
