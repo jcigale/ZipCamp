@@ -5,17 +5,34 @@ class Splash extends React.Component {
 
     componentDidMount() {
         let nav = document.getElementsByClassName('nav-bar');
-        nav[0].classList.add('splash')
+        nav[0].classList.add('splash');
+
+        let covid = document.getElementsByClassName('covid-header');
+        covid[0].classList.add('splash')
+        
     }
 
     componentWillUnmount() {
         let nav = document.getElementsByClassName('nav-bar splash');
-        nav[0].classList.remove('splash')
+        nav[0].classList.remove('splash');
+
+        let covid = document.getElementsByClassName('covid-header splash');
+        covid[0].classList.remove('splash')
     }
 
     render() {
         return (
         <div className='splash'>
+            <nav className='splash-nav'>
+                <div className='left-nav'>
+                    <Link to='/'><img src={logo} alt="logo" /></Link>  
+                </div>
+
+                <div className='right-nav'>
+                    <a href="https://www.linkedin.com/in/john-c-467b21ba/" target="_blank"><i className="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/jcigale" target="_blank"><i className="fab fa-github"></i></a>        
+                </div>
+            </nav>
             <div className='heading'>
                 <h1>Find yourself outside.</h1>
                 <h2>Discover and book tent camping, RV</h2>
@@ -40,8 +57,11 @@ class Splash extends React.Component {
                         <option value="Lodging"></option>
                     </select>
                 </div>
-                <button className='search-button'></button>
-            </div>
+                    <button className='search-button'><i className="fas fa-search"></i></button>
+                </div>
+                <img src={toilet} className='toilet'/>
+
+
         </div>
 
     )}

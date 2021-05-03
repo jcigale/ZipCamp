@@ -61,17 +61,33 @@
     }
 }
 
-header > span{
+.covid-header {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #41305C;
     width: 100%;
-    font-family: Calibre,
+    font-family: 'Calibre',
     Helvetica,
     Arial,
     sans-serif;
     color: #FFFFFF;
+    font-weight: 600;
+    font-size: 12px;
+    height: 40px;
+}
+
+.covid-headaer.splash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eae8e4;
+    width: 100%;
+    font-family: 'Calibre',
+    Helvetica,
+    Arial,
+    sans-serif;
+    color: #28400C;
     font-weight: 600;
     font-size: 12px;
     height: 40px;

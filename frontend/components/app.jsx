@@ -11,7 +11,7 @@ import Splash from './splash';
 const App = () => (
     <div>
         <header>
-            <span>Recreate responsibly during COVID-19</span>
+            <span className='covid-header'>Recreate responsibly during COVID-19</span>
             <GreetingContainer />
         </header>
         <Switch>
