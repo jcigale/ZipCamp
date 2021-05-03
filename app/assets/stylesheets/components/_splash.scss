@@ -3,6 +3,7 @@
     Helvetica,
     Arial,
     sans-serif;
+    width: 100%;
 }
 
 .back {
@@ -14,9 +15,14 @@
 }
 
 .toilet {
-    width: 80%;
+    width: 90%;
     height: auto;
     border-radius: 15px;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    
 }
 
 .covid-header.splash {
@@ -42,6 +48,7 @@
     background: rgb(243, 242, 239);
     position: sticky;
     top: 0;
+    z-index: 2;
 
 .left-nav {
     display: flex;
@@ -94,7 +101,7 @@
 .heading {
     text-align: center;
     color: #28400C;
-    padding-bottom: 15px;
+    padding-bottom: 50px;
     h1 {
         font-size: 64px; 
         font-weight: 700;
@@ -103,20 +110,74 @@
     h2 {
         font-size: 24px;
         font-weight: 500;
-        padding: 5px;
+        padding: 7px;
     }
 }
 
 .splash-search {
     position: absolute;
-    width: 75%;
+    width: 86%;
+    margin-left: 7%;
+    margin-right: 7%;
     display: flex;
     border: 1px solid rgb(229, 234, 223);
-    border-radius: 25px;
+    border-radius: 40px;
+    background: rgb(243, 242, 239);
+    z-index: 1;
+    color: #28400C;
+    font-size: 12px;
+    align-items: center;
 
     div{
         display: flex;
         flex-direction: column;
+        padding: 20px;
+    }
+
+    button {
+        border-radius: 50%;
+        border: none;
+        background:#40d9ac ;
+        height: 48px;
+        width: 48px;
+        margin-right: 20px;
+        margin-left: 10px;
+        margin-top: 12px;
+
+        i {
+            color: #FFFFFF;
+            font-size: 22px;
+        }
+        
+    }
+
+    button:hover {
+        background:#FFFFFF;
+        border: 2px solid #40d9ac;
+        cursor: pointer;
+
+        i{
+           color:#40d9ac;
+        }
+    }
+
+    input, select {
+        border-radius: 25px;
+        height: 48px;
+        border: 1px solid rgb(229, 234, 223);
+        margin-top: 5px;
+    }
+
+    .where {
+        width: 40%;
+    }
+
+    .date {
+        width: 20%
+    }
+
+    .accomodations {
+        width: 25%;
     }
 }
 

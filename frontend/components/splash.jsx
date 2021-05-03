@@ -58,7 +58,7 @@ class Splash extends React.Component {
                         <option value="Lodging"></option>
                     </select>
                 </div>
-                    <button className='search-button'><i className="fas fa-search"></i></button>
+                    <Link to='/spots'><button className='search-button'><i className="fas fa-search"></i></button></Link>
                 </div>
                 <img src={toilet} className='toilet'/>
 
