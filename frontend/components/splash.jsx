@@ -1,8 +1,20 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 
-export default function splash() {
-    return (
+class Splash extends React.Component {
+
+    componentDidMount() {
+        let nav = document.getElementsByClassName('nav-bar');
+        nav[0].classList.add('splash')
+    }
+
+    componentWillUnmount() {
+        let nav = document.getElementsByClassName('nav-bar splash');
+        nav[0].classList.remove('splash')
+    }
+
+    render() {
+        return (
         <div className='splash'>
             <div className='heading'>
                 <h1>Find yourself outside.</h1>
@@ -32,5 +44,7 @@ export default function splash() {
             </div>
         </div>
 
-    )
+    )}
 }
+
+export default withRouter(Splash);

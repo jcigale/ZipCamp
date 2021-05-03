@@ -7,7 +7,7 @@ import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import SearchContainer from './spots/search_container';
 import SpotShowContainer from './spot_show/spot_show_container';
-
+import Splash from './splash';
 const App = () => (
     <div>
         <header>
@@ -17,7 +17,8 @@ const App = () => (
         <Switch>
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
-            <Route exact path="/" component={SearchContainer} />
+            <Route exact path="/spots" component={SearchContainer} />
+            <Route exact path="/" component={Splash}/>
             <Route path="/spots/:spotId" component={SpotShowContainer} />
         </Switch>
     </div>

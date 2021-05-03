@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.nav-bar.splash {
+    display: none;
+}
+
 .left-nav {
     display: flex;
     margin-left: 20px;
@@ -30,6 +34,11 @@
         background: transparent;
         outline: none;
         border-width: 0px;
+    }
+     
+    i {
+        font-size: 18px;
+        padding-left: 10px;
     }
 
     div {
