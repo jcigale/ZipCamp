@@ -23,6 +23,7 @@ class Splash extends React.Component {
     render() {
         return (
         <div className='splash'>
+            <div className='back'></div>
             <nav className='splash-nav'>
                 <div className='left-nav'>
                     <Link to='/'><img src={logo} alt="logo" /></Link>  
