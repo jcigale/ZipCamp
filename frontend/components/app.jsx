@@ -12,8 +12,8 @@ const App = () => (
     <div>
         <header>
             <span className='covid-header'>Recreate responsibly during COVID-19</span>
-            <GreetingContainer />
         </header>
+            <GreetingContainer />
         <Switch>
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />

@@ -1,11 +1,17 @@
 export const icons = {
-    'tent': "fas fa-campground",
+    'ent': "fas fa-campground",
     'rv': "fas fa-caravan",
     'lodging': "fas fa-bed",
-    'biking': "fas fa-bicycle",
-    'swimming': "fas fa-swimmer" ,
-    'hiking': "fas fa-hiking",
-    'boating': "fas fa-ship",
-    'winter sports': "fas fa-skiing-nordic",
-    'fishing': "fas fa-fish"
+    'Biking': "fas fa-bicycle",
+    'Swimming': "fas fa-swimmer" ,
+    'Hiking': "fas fa-hiking",
+    'Boating': "fas fa-ship",
+    'Winter sports': "fas fa-skiing-nordic",
+    'Fishing': "fas fa-fish",
+    'ampfire': "fas fa-fire",
+    'pets': "fas fa-dog",
+    'toilet': "fas fa-toilet-paper",
+    'Sight seeing': "fas fa-binoculars"
+
+
 }

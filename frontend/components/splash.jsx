@@ -24,16 +24,7 @@ class Splash extends React.Component {
         return (
         <div className='splash'>
             <div className='back'></div>
-            <nav className='splash-nav'>
-                <div className='left-nav'>
-                    <Link to='/'><img src={logo} alt="logo" /></Link>  
-                </div>
-
-                <div className='right-nav'>
-                    <a href="https://www.linkedin.com/in/john-c-467b21ba/" target="_blank"><i className="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/jcigale" target="_blank"><i className="fab fa-github"></i></a>        
-                </div>
-            </nav>
+            
             <div className='heading'>
                 <h1>Find yourself outside.</h1>
                 <h2>Discover and book tent camping, RV</h2>

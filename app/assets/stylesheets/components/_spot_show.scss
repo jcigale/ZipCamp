@@ -61,7 +61,8 @@
 }
 
 .booking-form {
-    position: fixed;
+    position: sticky;
+    top: 0;
     background: white;
     border: 2px solid #ebebeb;
     margin-left: 70%;
@@ -177,6 +178,21 @@
 
 .details {
     display: flex;
+    font-family: "Calibre",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+    li {
+        font-size: 15px;
+        color: #333333;
+        padding-top: 8px;
+
+        i {
+            font-family: default;
+            padding-right: 4px;
+        }
+    }
 
     div {
         height: 300px;
@@ -186,6 +202,15 @@
         margin: 0 10px 20px;
         border-radius: 2px;
     }
+
+    h2 {
+        
+        font-size: 21px;
+        font-weight: 520;
+        
+
+    }
+
 }
 
 .checkin {
