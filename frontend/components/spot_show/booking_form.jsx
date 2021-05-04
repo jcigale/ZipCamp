@@ -27,18 +27,28 @@ class BookingForm extends React.Component {
         return (
             <div className='booking-form'>
                 <form onSubmit={this.handleSubmit}></form>
-                <div className='price'><span>${this.props.spot.price}</span></div>
+                <div className='price'>
+                    <div className='text'>
+                    <span>${this.props.spot.price}</span>
+                    <small>per night</small>
+                    </div>
+                </div>
                 <div className='dates'>
                     <div className='in'>
+                        <div className='text'>
                         <label>Check in</label>
                         <input type="date" placeholder='Select date'/>
+                        </div>
                     </div>
                     <div className='out'>
+                        <div className='text'>
                         <label>Check out</label>
                         <input type="date" placeholder='Select date'/>
+                        </div>
                     </div>
                 </div>
                 <div className='guests'>
+                    <div className='text'>
                     <label>Guests</label>
                     <select name="" id="">
                         <option value="1">1 guest</option>
@@ -48,6 +58,7 @@ class BookingForm extends React.Component {
                         <option value="5">5 guests</option>
                         <option value="6">6 guests</option>
                     </select>
+                    </div>
                 </div>
                 <div className='sub'>
                     <button type='submit'>Book for free</button>
