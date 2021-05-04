@@ -2,13 +2,13 @@ import { RECEIVE_SPOTS, RECEIVE_SPOT, RECEIVE_REVIEW, RECEIVE_BOOKING } from "..
 
 const spotsReducer = (state = {}, action) => {
   Object.freeze(state);
-  //debugger
+  debugger
   switch (action.type) {
     case RECEIVE_SPOTS:
       return action.spots;
-    case RECEIVE_SPOT:
-      const newSpot = { [action.spot.id]: action.spot };
-      return Object.assign({}, state, newSpot)
+    // case RECEIVE_SPOT:
+    //   const newSpot = { [action.spot.id]: action.spot };
+    //   return Object.assign({}, state, newSpot)
     // case RECEIVE_REVIEW:
     //   const { review } = action;
     //   const newState = Object.assign({}, state);

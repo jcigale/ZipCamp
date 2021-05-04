@@ -3,7 +3,7 @@ import SpotDetail from './spot_detail';
 import BookingForm from './booking_form';
 
 
-const SpotShow = ({ spot, reviews }) => {
+const SpotShow = ({ spot, reviews, spotId }) => {
 
 
     return (

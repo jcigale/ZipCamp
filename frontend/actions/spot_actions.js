@@ -44,8 +44,11 @@ export const fetchSpots = (filters) => dispatch => (
     APIUtil.fetchSpots(filters).then(spots => (dispatch(receiveSpots(spots))))
 )
 
-export const fetchSpot = id => dispatch => (
+export const fetchSpot = id => dispatch => { 
+    debugger
+    return (
+    
     APIUtil.fetchSpot(id).then(spot => (
         dispatch(receiveSpot(spot))
     )) 
-);
+)};

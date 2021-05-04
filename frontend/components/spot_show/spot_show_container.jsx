@@ -4,7 +4,7 @@ import { selectSpot, selectReviews } from '../../reducers/selectors';
 import SpotShow from './spot_show';
 
 const mapStateToProps = (state, { match }) => {
-    //debugger
+    debugger
     const spotId = parseInt(match.params.spotId);
     const spot = selectSpot(state.entities, spotId);
     const reviews = selectReviews(state.entities, spot);
@@ -12,6 +12,7 @@ const mapStateToProps = (state, { match }) => {
         spotId,
         spot,
         reviews,
+        state
     };
 }
 
