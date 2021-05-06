@@ -7,12 +7,11 @@ const mapStateToProps = (state, { match }) => {
     debugger
     const spotId = parseInt(match.params.spotId);
     const spot = selectSpot(state.entities, spotId);
-    const reviews = selectReviews(state.entities, spot);
+    // const reviews = selectReviews(state.entities, spot);
     return {
         spotId,
         spot,
-        reviews,
-        state
+        // reviews,
     };
 }
 

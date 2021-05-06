@@ -13,7 +13,6 @@ export const receiveSpots = spots => ({
 export const receiveSpot = ({ spot }) => ({
     type: RECEIVE_SPOT,
     spot,
-    reviews,
 })
 
 export const receiveReview = ({ review, author }) => ({

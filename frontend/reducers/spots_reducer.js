@@ -6,9 +6,9 @@ const spotsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_SPOTS:
       return action.spots;
-    // case RECEIVE_SPOT:
-    //   const newSpot = { [action.spot.id]: action.spot };
-    //   return Object.assign({}, state, newSpot)
+    case RECEIVE_SPOT:
+      const newSpot = { [action.spot.id]: action.spot };
+      return Object.assign({}, state, newSpot)
     // case RECEIVE_REVIEW:
     //   const { review } = action;
     //   const newState = Object.assign({}, state);

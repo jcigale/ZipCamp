@@ -1,7 +1,8 @@
 import React from 'react';
 import ReviewListItemContainer from './review_list_item_container';
 import {icons} from '../../util/icon_hash';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
+import { fetchSpots } from '../../actions/spot_actions'
 
 const reviewList = (reviews) => (
     reviews.map(review => (
@@ -23,15 +24,10 @@ const activitiesList = (spot) => {
 
 class SpotDetail extends React.Component {
 
-
     constructor(props) {
         super(props)
-        this.state = props.state
     }
 
-    componentDidMount() {
-
-    }
 
     render() {
 
@@ -99,7 +95,7 @@ class SpotDetail extends React.Component {
 
                 
 
-                    {reviewList(this.props.reviews)}
+                    {/* {reviewList(this.props.reviews)} */}
             </div>
             </div>
 
