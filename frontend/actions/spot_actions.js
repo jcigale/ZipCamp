@@ -34,7 +34,7 @@ export const createReview = review => dispatch => (
 )
 
 export const createBooking = booking => dispatch => (
-    APIUtil.createBooking(booking.then(review => (
+    APIUtil.createBooking(booking.then(booking => (
         dispatch(receiveBooking(booking))
     )))
 )

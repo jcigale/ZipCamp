@@ -2,6 +2,8 @@ import React from 'react';
 import SpotDetail from './spot_detail';
 import BookingForm from './booking_form';
 import SpotMap from '../spots/spot_map';
+import {createBooking} from '../../actions/spot_actions';
+import BookingFormContainer from '../spot_show/booking_form_container'
 
 
 const SpotShow = ({ spot, reviews, spotId, state, fetchSpot }) => {
@@ -13,7 +15,7 @@ const SpotShow = ({ spot, reviews, spotId, state, fetchSpot }) => {
     return (
         <div className='spot-show'>
             <SpotDetail  spot={spot}  state={state}/>
-            <BookingForm spot={spot} />
+            <BookingForm spot={spot} createBooking={createBooking}/>
             <SpotMap spots={spots} spotId= {spotId} singleSpot={true} fetchSpot={fetchSpot}/>
         </div>
     )

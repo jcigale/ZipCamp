@@ -14,6 +14,7 @@ class BookingForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        debugger
         const spotId = parseInt(this.props.match.params.spotId);
         const booking = Object.assign({}, this.state, { spot_id: spotId });
         this.props.createBooking(booking);
@@ -25,8 +26,8 @@ class BookingForm extends React.Component {
 
     render() {
         return (
-            <div className='booking-form'>
-                <form onSubmit={this.handleSubmit}></form>
+            <div className='book-box' >
+                <form className='booking-form' onSubmit={this.handleSubmit}>
                 <div className='price'>
                     <div className='text'>
                     <span>${this.props.spot.price}</span>
@@ -63,6 +64,7 @@ class BookingForm extends React.Component {
                 <div className='sub'>
                     <button type='submit'>Book for free</button>
                 </div>
+                </form>
             </div>
         )
     }
