@@ -57,6 +57,12 @@
         border-bottom: 2px solid rgb(0, 197, 133);
         transition: border-bottom 0.25s ease 0s;
     }
+
+    .triplink {
+        text-decoration: none;
+        padding-left: 12px;
+        padding-right: 5px;
+    }
 }
 
 .covid-header {

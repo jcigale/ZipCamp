@@ -15,7 +15,7 @@ const Review = ({ review, author }) => {
 
     return (
         <div>
-            {this.handleRecommended()}
+            {handleRecommended()}
             <p>{body}</p>
         </div>
     )
