@@ -1,14 +1,8 @@
 import React from 'react';
-import ReviewListItemContainer from './review_list_item_container';
 import {icons} from '../../util/icon_hash';
 import { withRouter } from 'react-router-dom';
-import { fetchSpots } from '../../actions/spot_actions'
-
-const reviewList = (reviews) => (
-    reviews.map(review => (
-        <ReviewListItemContainer review={review} key={review.id} />
-    ))
-)
+import ReviewList from '../reviews/review_list';
+import ReviewFormContainer from './booking_form_container';
 
 const activitiesList = (spot) => {
     return (
@@ -30,6 +24,7 @@ class SpotDetail extends React.Component {
 
 
     render() {
+        const reviews = this.props.reviews ? Object.values(this.props.reviews) : []
 
         return (
             <div>
@@ -92,11 +87,8 @@ class SpotDetail extends React.Component {
                         <span><b>Accepts bookings:</b> 6 months out</span>
                     </div>
                 </div>
-
-                
-
-                    {/* {reviewList(this.props.reviews)} */}
             </div>
+                <ReviewList reviews={reviews} session={this.props.session} deleteReview={this.props.deleteReview} />
             </div>
 
         )

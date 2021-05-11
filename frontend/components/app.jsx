@@ -7,6 +7,7 @@ import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import SearchContainer from './spots/search_container';
 import SpotShowContainer from './spot_show/spot_show_container';
+import BookingListContainer from './bookings/booking_list_container'
 import Splash from './splash';
 const App = () => (
     <div>
@@ -20,6 +21,7 @@ const App = () => (
             <Route exact path="/spots" component={SearchContainer} />
             <Route exact path="/" component={Splash}/>
             <Route path="/spots/:spotId" component={SpotShowContainer} />
+            <Route path='/users/:userId/trips' component={BookingListContainer} />
         </Switch>
     </div>
 )

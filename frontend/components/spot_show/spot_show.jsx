@@ -2,8 +2,7 @@ import React from 'react';
 import SpotDetail from './spot_detail';
 import BookingForm from './booking_form';
 import SpotMap from '../spots/spot_map';
-import {createBooking} from '../../actions/spot_actions';
-import BookingFormContainer from '../spot_show/booking_form_container'
+import {createBooking} from '../../actions/booking_actions';
 
 
 const SpotShow = ({ spot, reviews, spotId, state, fetchSpot }) => {

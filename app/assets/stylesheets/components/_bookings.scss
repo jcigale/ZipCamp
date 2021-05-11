@@ -1,0 +1,26 @@
+.booking {
+    display: flex;
+    flex-direction: row;
+
+    .bio {
+        display: flex;
+        flex-direction: column;
+        width: 240px;
+        padding: 20px;
+        margin-left: 10%;
+        border: 1px solid rgb(229, 234, 223);
+        border-radius: 2px;
+
+        .user {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            img {
+                height: 70px;
+                width: 70px;
+                border-radius: 50%;
+                border: 1px solid rgb(229, 234, 223);
+            }
+        }
+    }
+}
