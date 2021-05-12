@@ -5,15 +5,15 @@ import SpotMap from '../spots/spot_map';
 import {createBooking} from '../../actions/booking_actions';
 
 
-const SpotShow = ({ spot, reviews, spotId, state, fetchSpot }) => {
+const SpotShow = ({ spot, spotId, state, fetchSpot }) => {
     const spots = {
         [spotId]: spot
     };
-
+    debugger
 
     return (
         <div className='spot-show'>
-            <SpotDetail  spot={spot}  state={state}/>
+            <SpotDetail  spot={spot}  state={state} reviews={spot.reviews}/>
             <BookingForm spot={spot} createBooking={createBooking}/>
             <SpotMap spots={spots} spotId= {spotId} singleSpot={true} fetchSpot={fetchSpot}/>
         </div>

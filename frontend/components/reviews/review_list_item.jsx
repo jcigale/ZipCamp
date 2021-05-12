@@ -38,50 +38,10 @@ class ReviewListItem extends React.Component {
         // const delete_button = (this.props.session ? <button onClick={this.handleDelete} className="review-delete-button">Delete Review</button> : null )
 
         return (
-            <div className="review-show">
-
-                <div className="review-show-header">
-                    <div className="review-show-header-1">
-                        <div className="review-photo">
-                            <img src={this.props.review.profile_photo[0]}></img>
-                        </div>
-
-                        <div className="review-show-header-content">
-                            <div className="review-show-header-content-icon">
-                                <i className="firstthumbs fas fa-thumbs-up"></i>
-                            </div>
-                            <h5> by <strong>{this.props.review.user.fname} {this.props.review.user.lname}</strong></h5>
-                        </div>
-                    </div>
-
-                    <div className="review-show-header-2">
-                        <div className="review-show-header-2-star">
-                            <i className="review-rating-star fas fa-star"></i>
-                        </div>
-                        <h5 className="review-show-header-2-text"><strong>{this.props.review.rating}</strong> / 5</h5>
-                    </div>
-
-                    <div className="review-show-header-3">
-                        <h5 className="review-show-header-3-date">{this.dateFormat(this.props.review.created_at)}</h5>
-                    </div>
-
-                </div>
-
-                <div className="review-show-body">
-                    <div className="review-show-body-1"></div>
-                    <div className="review-show-body-2">
-                        <p><strong>{this.props.review.title}</strong></p>
-                        <p>{this.props.review.body}</p>
-                        <div onClick={this.handleClick} className="review-show-body-2-button">
-                            <div className="secondthumbs-div">
-                                <i className="secondthumbs fas fa-thumbs-up"></i>
-                            </div>
-                            <h5 className="review-helpful-text">Helpful</h5>
-                            <h5>{this.state.helpful}</h5>
-                        </div>
-                        {delete_button}
-                    </div>
-                </div>
+            <div>
+                <span>    
+                    {this.props.review.body}
+                </span>
             </div>
         );
     }
