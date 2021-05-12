@@ -56180,3 +56180,769 @@ Processing by Api::SpotsController#index as JSON
 Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 2.8ms)
 
 
+Started GET "/api/spots" for ::1 at 2021-05-12 13:27:40 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (15.4ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (11.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 65], ["spot_id", 66], ["spot_id", 67], ["spot_id", 68], ["spot_id", 69], ["spot_id", 70], ["spot_id", 71], ["spot_id", 72], ["spot_id", 73], ["spot_id", 74]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (1.7ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/index.json.jbuilder (37.4ms)
+Completed 200 OK in 39ms (Views: 12.0ms | ActiveRecord: 26.4ms)
+
+
+Started GET "/" for ::1 at 2021-05-12 13:27:42 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tDwOqdO4lFzN36TFeQe4cw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 34ms (Views: 27.3ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-05-12 13:27:43 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (0.5ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 65], ["spot_id", 66], ["spot_id", 67], ["spot_id", 68], ["spot_id", 69], ["spot_id", 70], ["spot_id", 71], ["spot_id", 72], ["spot_id", 73], ["spot_id", 74]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.3ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.3ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/index.json.jbuilder (25.5ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-05-12 13:27:49 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (1.9ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (1.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 65], ["spot_id", 66], ["spot_id", 67], ["spot_id", 68], ["spot_id", 69], ["spot_id", 70], ["spot_id", 71], ["spot_id", 72], ["spot_id", 73], ["spot_id", 74]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.5ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.3ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/index.json.jbuilder (18.2ms)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-05-12 13:27:57 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (0.6ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 65], ["spot_id", 66], ["spot_id", 67], ["spot_id", 68], ["spot_id", 69], ["spot_id", 70], ["spot_id", 71], ["spot_id", 72], ["spot_id", 73], ["spot_id", 74]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  Rendered api/spots/index.json.jbuilder (6.1ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/spots/66" for ::1 at 2021-05-12 13:28:00 -0400
+Processing by Api::SpotsController#show as JSON
+  Parameters: {"id"=>"66"}
+  [1m[36mSpot Load (13.3ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  ↳ app/controllers/api/spots_controller.rb:9
+  Rendering api/spots/show.json.jbuilder
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 66]]
+  ↳ app/views/api/spots/show.json.jbuilder:2
+  Rendered api/spots/_spot.json.jbuilder (0.3ms)
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 66]]
+  ↳ app/views/api/spots/show.json.jbuilder:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 21]]
+  ↳ app/views/api/spots/show.json.jbuilder:6
+  Rendered api/reviews/_review.json.jbuilder (0.7ms)
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 66]]
+  ↳ app/views/api/spots/show.json.jbuilder:19
+  Rendered api/spots/show.json.jbuilder (5.5ms)
+Completed 200 OK in 21ms (Views: 5.0ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-05-12 13:29:15 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (2.0ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 65], ["spot_id", 66], ["spot_id", 67], ["spot_id", 68], ["spot_id", 69], ["spot_id", 70], ["spot_id", 71], ["spot_id", 72], ["spot_id", 73], ["spot_id", 74]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.6ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.5ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/index.json.jbuilder (10.5ms)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 3.2ms)
+
+
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (10.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:8
+  [1m[36mSpot Destroy (19.2ms)[0m  [1m[31mDELETE FROM "spots"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mReview Destroy (2.0ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBooking Destroy (1.0ms)[0m  [1m[31mDELETE FROM "bookings"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5ctTBeWpI09TlB-tTUuGhg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5ctTBeWpI09TlB-tTUuGhg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (5.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "zipcode", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Demo"], ["last_name", "User"], ["email", "demo@gmail.com"], ["zipcode", 12345], ["password_digest", "$2a$12$I2Uh4CTfEIKFkUa.xmnLD.F/TuiVO5k33E45Oec6HR8WXfsqgyjby"], ["session_token", "5ctTBeWpI09TlB-tTUuGhg"], ["created_at", "2021-05-12 17:38:03.478271"], ["updated_at", "2021-05-12 17:38:03.478271"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mSpot Create (2.0ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Beautiful campground with a dozen spots right by the lake and close to town!"], ["longitude", "-74.41991"], ["latitude", "43.96848"], ["spot_type", "RVs"], ["details", "---\nstate: New York\n"], ["activities", "---\n- Swimming\n- Hiking\n- Boating\n- Fishing\n"], ["created_at", "2021-05-12 17:38:03.500505"], ["updated_at", "2021-05-12 17:38:03.500505"], ["photo_url", "https://assets.simpleviewinc.com/simpleview/image/fetch/q_75/https://assets.simpleviewinc.com/simpleview/image/upload/crm/newyorkstate/Hosses_Campground0_b24da16b-9d26-5573-a68af1abbbbba572.jpg"], ["title", "Hoss Campground"], ["price", 80]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mSpot Create (0.5ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Beautiful secluded site to pitch a tent in the woods!"], ["longitude", "-74.5612049"], ["latitude", "43.8608342"], ["spot_type", "Campsite"], ["details", "---\nstate: New York\n"], ["activities", "---\n- Swimming\n- Hiking\n- Fishing\n"], ["created_at", "2021-05-12 17:38:03.503999"], ["updated_at", "2021-05-12 17:38:03.503999"], ["photo_url", "http://www.therelativeobserver.com/wp-content/uploads/2018/08/SMP.jpg"], ["title", "Sargent Pond"], ["price", 22]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mSpot Create (0.4ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Spacious house for the family to spend a week up at the lake!"], ["longitude", "-74.44109006164943"], ["latitude", "43.965291487508935"], ["spot_type", "Lodging"], ["details", "---\nstate: New York\n"], ["activities", "---\n- Swimming\n- Boating\n- Fishing\n- Hiking\n- Winter sports\n"], ["created_at", "2021-05-12 17:38:03.505601"], ["updated_at", "2021-05-12 17:38:03.505601"], ["photo_url", "https://p.rdcpix.com/v01/l0be8b143-m0xd-w1020_h770_q80.jpg"], ["title", "Abenaki House"], ["price", 180]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mSpot Create (0.3ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Nice spot to pitch a tent very close to a beautiful mountain!"], ["longitude", "-74.4527724"], ["latitude", "43.9643133"], ["spot_type", "Campsite"], ["details", "---\nstate: New York\n"], ["activities", "---\n- Hiking\n- Winter sports\n"], ["created_at", "2021-05-12 17:38:03.507008"], ["updated_at", "2021-05-12 17:38:03.507008"], ["photo_url", "https://cdn.shopify.com/s/files/1/0817/7807/files/OwlsHead_Adirondacks_grande.jpg?10623345405295115173"], ["title", "Owls Head"], ["price", 28]]
+  ↳ db/seeds.rb:49
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mSpot Create (0.3ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Located in Yellowstone National Park, Old Faithful Inn - Inside the Park is in the mountains and in a national park. The areas natural beauty can be seen at Old Faithful and Grand Prismatic Spring. Be sure not to miss outdoor adventures like hiking/biking trails and ecotours, or hop on a bike rental nearby and take a self-guided tour around Yellowstone National Park."], ["longitude", "-110.3979311"], ["latitude", "44.4599892"], ["spot_type", "Lodging"], ["details", "---\nstate: Wyoming\n"], ["activities", "---\n- Hiking\n- Sight seeing\n- Biking\n"], ["created_at", "2021-05-12 17:38:03.508245"], ["updated_at", "2021-05-12 17:38:03.508245"], ["photo_url", "https://images.goodsam.com/trailerlifedirectory/largefeatured/1000x/pho_300006485_01.jpg"], ["title", "Old Faithful Inn"], ["price", 218]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mSpot Create (0.4ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Less than 25 miles north of Boston and <5 miles from the interstate, Lorraine Park campground at Harold Parker State Forest provides ample on-site activities and also serves as a jumping off point for exploring the Massachusetts coast north of Boston or a stop en route to NH and Maine."], ["longitude", "-71.28248423125"], ["latitude", "42.43240290482139"], ["spot_type", "Campsite"], ["details", "---\nstate: Massachusetts\n"], ["activities", "---\n- Swimming\n- Hiking\n- Biking\n"], ["created_at", "2021-05-12 17:38:03.509642"], ["updated_at", "2021-05-12 17:38:03.509642"], ["photo_url", "https://media-cdn.tripadvisor.com/media/photo-s/04/4d/ea/63/lorraine-park-campground.jpg"], ["title", "Loraine Park"], ["price", 56]]
+  ↳ db/seeds.rb:71
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:82
+  [1m[36mSpot Create (0.3ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Nice spot to pitch a tent very close to a beautiful mountain!"], ["longitude", "-71.2831756"], ["latitude", "42.040577"], ["spot_type", "Campsite, RVs, Lodging"], ["details", "---\nstate: Massachusetts\n"], ["activities", "---\n- Hiking\n- Biking\n- Sight seeing\n"], ["created_at", "2021-05-12 17:38:03.511095"], ["updated_at", "2021-05-12 17:38:03.511095"], ["photo_url", "https://images.goodsam.com/trailerlifedirectory/largefeatured/1000x/pho_300006485_01.jpg"], ["title", "Normandy Farms Camping"], ["price", 56]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:93
+  [1m[36mSpot Create (0.3ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Camping near Stowe, Vermont. Offering open, grassy and full hookup RV sites that back up to the woods, and tent sites that overlook the Lamoille River."], ["longitude", "-72.53643"], ["latitude", "44.568742"], ["spot_type", "Campsite, RVs"], ["details", "---\nstate: Vermont\n"], ["activities", "---\n- Hiking\n- Winter sports\n- Sight seeing\n"], ["created_at", "2021-05-12 17:38:03.512344"], ["updated_at", "2021-05-12 17:38:03.512344"], ["photo_url", "https://www.roverpass.com/system/pictures/images/000/025/935/full/mountain-view-campground-morrisville-vt-5.JPG?1487437117"], ["title", "Mountain View Campground"], ["price", 54]]
+  ↳ db/seeds.rb:93
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:93
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:105
+  [1m[36mSpot Create (0.3ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Located on the southwest shore of Yellowstone Lake, the Grant Village Campground is situated at an elevation of approximately 7,800 feet in a lodgepole pine forest, just a few miles from the enchanting West Thumb Geyser Basin. This geyser basin is located on the shore of the lake, with an easily navigated boardwalk and trail system providing terrific views of the various hot springs and thermal features. The campground offers a relaxing setting with easy access to many services and amenities. Grant Village Campground is just over 40 miles from Colter Bay."], ["longitude", "-110.5662405"], ["latitude", "44.3953541"], ["spot_type", "Campsite, RVs"], ["details", "---\nstate: Wyoming\n"], ["activities", "---\n- Sight seeing\n- Biking\n- Hiking\n"], ["created_at", "2021-05-12 17:38:03.514124"], ["updated_at", "2021-05-12 17:38:03.514124"], ["photo_url", "https://www.nps.gov/common/uploads/grid_builder/yell/crop16_9/13266D98-1DD8-B71B-0BE23ADC28F89F3F.jpg?width=465&quality=90&mode=crop"], ["title", "Grant Village Campground"], ["price", 74]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:116
+  [1m[36mSpot Create (0.7ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Against the breathtaking backdrop of New England’s Green Mountains, Stowe Vermont’s allure arrives unforgettably at Topnotch Resort. Tucked into a 120-acre wooded glade at the foothills of Mount Mansfield, Topnotch is a grand definition of mountain spirit, a sophisticated gem where alpine luxury is served on an intimate scale. Wrap yourself in the warm hospitality that has made this resort and spa a mountain destination for decades – the ideal basecamp for Stowe’s exhilarating four-season adventures."], ["longitude", "-72.7387608"], ["latitude", "44.4945508"], ["spot_type", "Campsite"], ["details", "---\nstate: Vermont\n"], ["activities", "---\n- Swimming\n- Hiking\n- Winter sports\n"], ["created_at", "2021-05-12 17:38:03.515362"], ["updated_at", "2021-05-12 17:38:03.515362"], ["photo_url", "https://media-cdn.tripadvisor.com/media/photo-s/04/4c/ac/7a/the-new-topnotch-resort.jpg"], ["title", "Topnotch Resort"], ["price", 199]]
+  ↳ db/seeds.rb:116
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:116
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:127
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:127
+  [1m[36mSpot Load (0.7ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ db/seeds.rb:127
+  [1m[36mReview Create (0.6ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 22], ["spot_id", 75], ["created_at", "2021-05-12 17:38:03.537790"], ["updated_at", "2021-05-12 17:38:03.537790"]]
+  ↳ db/seeds.rb:127
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:127
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:135
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:135
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ db/seeds.rb:135
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 22], ["spot_id", 76], ["created_at", "2021-05-12 17:38:03.539953"], ["updated_at", "2021-05-12 17:38:03.539953"]]
+  ↳ db/seeds.rb:135
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:135
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:143
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:143
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ db/seeds.rb:143
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 22], ["spot_id", 77], ["created_at", "2021-05-12 17:38:03.541774"], ["updated_at", "2021-05-12 17:38:03.541774"]]
+  ↳ db/seeds.rb:143
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:143
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:151
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:151
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ db/seeds.rb:151
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 22], ["spot_id", 78], ["created_at", "2021-05-12 17:38:03.543635"], ["updated_at", "2021-05-12 17:38:03.543635"]]
+  ↳ db/seeds.rb:151
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:151
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:159
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:159
+  [1m[36mSpot Load (0.4ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 79], ["LIMIT", 1]]
+  ↳ db/seeds.rb:159
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 22], ["spot_id", 79], ["created_at", "2021-05-12 17:38:03.545358"], ["updated_at", "2021-05-12 17:38:03.545358"]]
+  ↳ db/seeds.rb:159
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:159
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:167
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 22], ["spot_id", 80], ["created_at", "2021-05-12 17:38:03.547320"], ["updated_at", "2021-05-12 17:38:03.547320"]]
+  ↳ db/seeds.rb:167
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:167
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:175
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:175
+  [1m[36mSpot Load (0.1ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ db/seeds.rb:175
+  [1m[36mReview Create (1.7ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 22], ["spot_id", 81], ["created_at", "2021-05-12 17:38:03.548729"], ["updated_at", "2021-05-12 17:38:03.548729"]]
+  ↳ db/seeds.rb:175
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:175
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:183
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:183
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ db/seeds.rb:183
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 22], ["spot_id", 82], ["created_at", "2021-05-12 17:38:03.551647"], ["updated_at", "2021-05-12 17:38:03.551647"]]
+  ↳ db/seeds.rb:183
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:183
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:191
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:191
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 83], ["LIMIT", 1]]
+  ↳ db/seeds.rb:191
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 22], ["spot_id", 83], ["created_at", "2021-05-12 17:38:03.553162"], ["updated_at", "2021-05-12 17:38:03.553162"]]
+  ↳ db/seeds.rb:191
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:191
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:199
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:199
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  ↳ db/seeds.rb:199
+  [1m[36mReview Create (0.8ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 22], ["spot_id", 84], ["created_at", "2021-05-12 17:38:03.554889"], ["updated_at", "2021-05-12 17:38:03.554889"]]
+  ↳ db/seeds.rb:199
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:199
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:207
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:207
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ db/seeds.rb:207
+  [1m[36mBooking Create (2.9ms)[0m  [1m[32mINSERT INTO "bookings" ("start_date", "end_date", "user_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["start_date", 2004], ["end_date", 2014], ["user_id", 22], ["spot_id", 82], ["created_at", "2021-05-12 17:38:03.571458"], ["updated_at", "2021-05-12 17:38:03.571458"]]
+  ↳ db/seeds.rb:207
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:207
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (5.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:8
+  [1m[36mSpot Destroy (0.8ms)[0m  [1m[31mDELETE FROM "spots"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mReview Destroy (0.9ms)[0m  [1m[31mDELETE FROM "reviews"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBooking Destroy (0.8ms)[0m  [1m[31mDELETE FROM "bookings"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Zy4VgRZGxmjcQC4pvR6ayQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Zy4VgRZGxmjcQC4pvR6ayQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "zipcode", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Demo"], ["last_name", "User"], ["email", "demo@gmail.com"], ["zipcode", 12345], ["password_digest", "$2a$12$vdWtgDeOvIww/wTt9Vx6LOhg6QBpNtiSC8mmy8uWhHq9Jyi7Es31i"], ["session_token", "Zy4VgRZGxmjcQC4pvR6ayQ"], ["created_at", "2021-05-12 17:38:40.589099"], ["updated_at", "2021-05-12 17:38:40.589099"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mSpot Create (0.9ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Beautiful campground with a dozen spots right by the lake and close to town!"], ["longitude", "-74.41991"], ["latitude", "43.96848"], ["spot_type", "RVs"], ["details", "---\nstate: New York\n"], ["activities", "---\n- Swimming\n- Hiking\n- Boating\n- Fishing\n"], ["created_at", "2021-05-12 17:38:40.605414"], ["updated_at", "2021-05-12 17:38:40.605414"], ["photo_url", "https://assets.simpleviewinc.com/simpleview/image/fetch/q_75/https://assets.simpleviewinc.com/simpleview/image/upload/crm/newyorkstate/Hosses_Campground0_b24da16b-9d26-5573-a68af1abbbbba572.jpg"], ["title", "Hoss Campground"], ["price", 80]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mSpot Create (0.5ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Beautiful secluded site to pitch a tent in the woods!"], ["longitude", "-74.5612049"], ["latitude", "43.8608342"], ["spot_type", "Campsite"], ["details", "---\nstate: New York\n"], ["activities", "---\n- Swimming\n- Hiking\n- Fishing\n"], ["created_at", "2021-05-12 17:38:40.607377"], ["updated_at", "2021-05-12 17:38:40.607377"], ["photo_url", "http://www.therelativeobserver.com/wp-content/uploads/2018/08/SMP.jpg"], ["title", "Sargent Pond"], ["price", 22]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mSpot Create (0.5ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Spacious house for the family to spend a week up at the lake!"], ["longitude", "-74.44109006164943"], ["latitude", "43.965291487508935"], ["spot_type", "Lodging"], ["details", "---\nstate: New York\n"], ["activities", "---\n- Swimming\n- Boating\n- Fishing\n- Hiking\n- Winter sports\n"], ["created_at", "2021-05-12 17:38:40.608745"], ["updated_at", "2021-05-12 17:38:40.608745"], ["photo_url", "https://p.rdcpix.com/v01/l0be8b143-m0xd-w1020_h770_q80.jpg"], ["title", "Abenaki House"], ["price", 180]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:49
+  [1m[36mSpot Create (0.6ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Nice spot to pitch a tent very close to a beautiful mountain!"], ["longitude", "-74.4527724"], ["latitude", "43.9643133"], ["spot_type", "Campsite"], ["details", "---\nstate: New York\n"], ["activities", "---\n- Hiking\n- Winter sports\n"], ["created_at", "2021-05-12 17:38:40.610226"], ["updated_at", "2021-05-12 17:38:40.610226"], ["photo_url", "https://cdn.shopify.com/s/files/1/0817/7807/files/OwlsHead_Adirondacks_grande.jpg?10623345405295115173"], ["title", "Owls Head"], ["price", 28]]
+  ↳ db/seeds.rb:49
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:49
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mSpot Create (1.2ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Located in Yellowstone National Park, Old Faithful Inn - Inside the Park is in the mountains and in a national park. The areas natural beauty can be seen at Old Faithful and Grand Prismatic Spring. Be sure not to miss outdoor adventures like hiking/biking trails and ecotours, or hop on a bike rental nearby and take a self-guided tour around Yellowstone National Park."], ["longitude", "-110.3979311"], ["latitude", "44.4599892"], ["spot_type", "Lodging"], ["details", "---\nstate: Wyoming\n"], ["activities", "---\n- Hiking\n- Sight seeing\n- Biking\n"], ["created_at", "2021-05-12 17:38:40.611996"], ["updated_at", "2021-05-12 17:38:40.611996"], ["photo_url", "https://images.goodsam.com/trailerlifedirectory/largefeatured/1000x/pho_300006485_01.jpg"], ["title", "Old Faithful Inn"], ["price", 218]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mSpot Create (0.4ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Less than 25 miles north of Boston and <5 miles from the interstate, Lorraine Park campground at Harold Parker State Forest provides ample on-site activities and also serves as a jumping off point for exploring the Massachusetts coast north of Boston or a stop en route to NH and Maine."], ["longitude", "-71.28248423125"], ["latitude", "42.43240290482139"], ["spot_type", "Campsite"], ["details", "---\nstate: Massachusetts\n"], ["activities", "---\n- Swimming\n- Hiking\n- Biking\n"], ["created_at", "2021-05-12 17:38:40.614176"], ["updated_at", "2021-05-12 17:38:40.614176"], ["photo_url", "https://media-cdn.tripadvisor.com/media/photo-s/04/4d/ea/63/lorraine-park-campground.jpg"], ["title", "Loraine Park"], ["price", 56]]
+  ↳ db/seeds.rb:71
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:82
+  [1m[36mSpot Create (0.4ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Nice spot to pitch a tent very close to a beautiful mountain!"], ["longitude", "-71.2831756"], ["latitude", "42.040577"], ["spot_type", "Campsite, RVs, Lodging"], ["details", "---\nstate: Massachusetts\n"], ["activities", "---\n- Hiking\n- Biking\n- Sight seeing\n"], ["created_at", "2021-05-12 17:38:40.615426"], ["updated_at", "2021-05-12 17:38:40.615426"], ["photo_url", "https://images.goodsam.com/trailerlifedirectory/largefeatured/1000x/pho_300006485_01.jpg"], ["title", "Normandy Farms Camping"], ["price", 56]]
+  ↳ db/seeds.rb:82
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:82
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:93
+  [1m[36mSpot Create (0.5ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Camping near Stowe, Vermont. Offering open, grassy and full hookup RV sites that back up to the woods, and tent sites that overlook the Lamoille River."], ["longitude", "-72.53643"], ["latitude", "44.568742"], ["spot_type", "Campsite, RVs"], ["details", "---\nstate: Vermont\n"], ["activities", "---\n- Hiking\n- Winter sports\n- Sight seeing\n"], ["created_at", "2021-05-12 17:38:40.616980"], ["updated_at", "2021-05-12 17:38:40.616980"], ["photo_url", "https://www.roverpass.com/system/pictures/images/000/025/935/full/mountain-view-campground-morrisville-vt-5.JPG?1487437117"], ["title", "Mountain View Campground"], ["price", 54]]
+  ↳ db/seeds.rb:93
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:93
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:105
+  [1m[36mSpot Create (0.5ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Located on the southwest shore of Yellowstone Lake, the Grant Village Campground is situated at an elevation of approximately 7,800 feet in a lodgepole pine forest, just a few miles from the enchanting West Thumb Geyser Basin. This geyser basin is located on the shore of the lake, with an easily navigated boardwalk and trail system providing terrific views of the various hot springs and thermal features. The campground offers a relaxing setting with easy access to many services and amenities. Grant Village Campground is just over 40 miles from Colter Bay."], ["longitude", "-110.5662405"], ["latitude", "44.3953541"], ["spot_type", "Campsite, RVs"], ["details", "---\nstate: Wyoming\n"], ["activities", "---\n- Sight seeing\n- Biking\n- Hiking\n"], ["created_at", "2021-05-12 17:38:40.618573"], ["updated_at", "2021-05-12 17:38:40.618573"], ["photo_url", "https://www.nps.gov/common/uploads/grid_builder/yell/crop16_9/13266D98-1DD8-B71B-0BE23ADC28F89F3F.jpg?width=465&quality=90&mode=crop"], ["title", "Grant Village Campground"], ["price", 74]]
+  ↳ db/seeds.rb:105
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:105
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:116
+  [1m[36mSpot Create (0.7ms)[0m  [1m[32mINSERT INTO "spots" ("description", "longitude", "latitude", "spot_type", "details", "activities", "created_at", "updated_at", "photo_url", "title", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["description", "Against the breathtaking backdrop of New England’s Green Mountains, Stowe Vermont’s allure arrives unforgettably at Topnotch Resort. Tucked into a 120-acre wooded glade at the foothills of Mount Mansfield, Topnotch is a grand definition of mountain spirit, a sophisticated gem where alpine luxury is served on an intimate scale. Wrap yourself in the warm hospitality that has made this resort and spa a mountain destination for decades – the ideal basecamp for Stowe’s exhilarating four-season adventures."], ["longitude", "-72.7387608"], ["latitude", "44.4945508"], ["spot_type", "Campsite"], ["details", "---\nstate: Vermont\n"], ["activities", "---\n- Swimming\n- Hiking\n- Winter sports\n"], ["created_at", "2021-05-12 17:38:40.620285"], ["updated_at", "2021-05-12 17:38:40.620285"], ["photo_url", "https://media-cdn.tripadvisor.com/media/photo-s/04/4c/ac/7a/the-new-topnotch-resort.jpg"], ["title", "Topnotch Resort"], ["price", 199]]
+  ↳ db/seeds.rb:116
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:116
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:127
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:127
+  [1m[36mSpot Load (0.6ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 85], ["LIMIT", 1]]
+  ↳ db/seeds.rb:127
+  [1m[36mReview Create (0.6ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 23], ["spot_id", 85], ["created_at", "2021-05-12 17:38:40.640770"], ["updated_at", "2021-05-12 17:38:40.640770"]]
+  ↳ db/seeds.rb:127
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:127
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:135
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:135
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ db/seeds.rb:135
+  [1m[36mReview Create (0.6ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 23], ["spot_id", 86], ["created_at", "2021-05-12 17:38:40.647070"], ["updated_at", "2021-05-12 17:38:40.647070"]]
+  ↳ db/seeds.rb:135
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:135
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:143
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:143
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ db/seeds.rb:143
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 23], ["spot_id", 87], ["created_at", "2021-05-12 17:38:40.650216"], ["updated_at", "2021-05-12 17:38:40.650216"]]
+  ↳ db/seeds.rb:143
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:143
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:151
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:151
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ db/seeds.rb:151
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 23], ["spot_id", 88], ["created_at", "2021-05-12 17:38:40.652207"], ["updated_at", "2021-05-12 17:38:40.652207"]]
+  ↳ db/seeds.rb:151
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:151
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:159
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:159
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 89], ["LIMIT", 1]]
+  ↳ db/seeds.rb:159
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 23], ["spot_id", 89], ["created_at", "2021-05-12 17:38:40.654551"], ["updated_at", "2021-05-12 17:38:40.654551"]]
+  ↳ db/seeds.rb:159
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:159
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:167
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 23], ["spot_id", 90], ["created_at", "2021-05-12 17:38:40.657154"], ["updated_at", "2021-05-12 17:38:40.657154"]]
+  ↳ db/seeds.rb:167
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:167
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:175
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:175
+  [1m[36mSpot Load (0.1ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ db/seeds.rb:175
+  [1m[36mReview Create (0.8ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 23], ["spot_id", 91], ["created_at", "2021-05-12 17:38:40.659127"], ["updated_at", "2021-05-12 17:38:40.659127"]]
+  ↳ db/seeds.rb:175
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:175
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:183
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:183
+  [1m[36mSpot Load (0.1ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 92], ["LIMIT", 1]]
+  ↳ db/seeds.rb:183
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 23], ["spot_id", 92], ["created_at", "2021-05-12 17:38:40.661497"], ["updated_at", "2021-05-12 17:38:40.661497"]]
+  ↳ db/seeds.rb:183
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:183
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:191
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:191
+  [1m[36mSpot Load (0.1ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 93], ["LIMIT", 1]]
+  ↳ db/seeds.rb:191
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 23], ["spot_id", 93], ["created_at", "2021-05-12 17:38:40.663212"], ["updated_at", "2021-05-12 17:38:40.663212"]]
+  ↳ db/seeds.rb:191
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:191
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:199
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:199
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  ↳ db/seeds.rb:199
+  [1m[36mReview Create (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "body", "recommended", "author_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "good time"], ["body", "we had a good time at this location"], ["recommended", true], ["author_id", 23], ["spot_id", 94], ["created_at", "2021-05-12 17:38:40.664919"], ["updated_at", "2021-05-12 17:38:40.664919"]]
+  ↳ db/seeds.rb:199
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:199
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:207
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ db/seeds.rb:207
+  [1m[36mSpot Load (0.1ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 92], ["LIMIT", 1]]
+  ↳ db/seeds.rb:207
+  [1m[36mBooking Create (1.4ms)[0m  [1m[32mINSERT INTO "bookings" ("start_date", "end_date", "user_id", "spot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["start_date", "2021-05-12"], ["end_date", "2021-06-01"], ["user_id", 23], ["spot_id", 92], ["created_at", "2021-05-12 17:38:40.679159"], ["updated_at", "2021-05-12 17:38:40.679159"]]
+  ↳ db/seeds.rb:207
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:207
+Started GET "/" for ::1 at 2021-05-12 13:38:59 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tDwOqdO4lFzN36TFeQe4cw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-05-12 13:38:59 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (2.4ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (2.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 85], ["spot_id", 86], ["spot_id", 87], ["spot_id", 88], ["spot_id", 89], ["spot_id", 90], ["spot_id", 91], ["spot_id", 92], ["spot_id", 93], ["spot_id", 94]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/index.json.jbuilder (10.7ms)
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/api/session" for ::1 at 2021-05-12 13:39:02 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Demo", "last_name"=>"User", "email"=>"demo@gmail.com", "zipcode"=>"12345", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:49
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@gmail.com"], ["id", 23], ["LIMIT", 1]]
+  ↳ app/models/user.rb:49
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["id", 23], ["LIMIT", 1]]
+  ↳ app/models/user.rb:49
+  [1m[36mUser Update (6.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["updated_at", "2021-05-12 17:39:02.931277"], ["id", 23]]
+  ↳ app/models/user.rb:49
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:49
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/show.json.jbuilder (0.6ms)
+Completed 200 OK in 265ms (Views: 1.7ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/api/users/23/bookings" for ::1 at 2021-05-12 13:39:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/23/bookings"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-05-12 13:39:49 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 287ms (Views: 285.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/users/23/bookings" for ::1 at 2021-05-12 13:41:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/23/bookings"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-05-12 13:41:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (1.0ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (38.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 53ms (Views: 29.2ms | ActiveRecord: 23.2ms)
+
+
+Started GET "/api/users/23/bookings" for ::1 at 2021-05-12 13:42:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/23/bookings"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-05-12 13:42:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 276ms (Views: 274.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2021-05-12 13:44:07 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (0.9ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (2.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 254ms (Views: 251.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2021-05-12 13:45:33 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (1.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 230ms (Views: 228.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2021-05-12 13:45:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (1.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (2.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 46ms (Views: 43.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/users/23/bookings" for ::1 at 2021-05-12 13:45:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/23/bookings"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'

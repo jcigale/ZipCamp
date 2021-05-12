@@ -74,30 +74,9 @@ class BookingIndexItem extends React.Component {
         }
 
         return (
-            <div onClick={this.handleClick} className="user-bookings-index-item">
-                <div className="user-bookings-index-item-imagediv">
-                    <img className="user-bookings-index-item-image" src={spot.image_url}></img>
-                </div>
-                <h3>{spot.name}</h3>
-                <h3 className="user-bookings-index-item-state">{spot.city}, {spot.state}</h3>
-                <h3 className="user-bookings-index-item-date">{this.dateFormat(this.props.trip.start_date)} - {this.dateFormat(this.props.trip.end_date)}</h3>
-                <div className="user-bookings-index-item-buttons">
-
-                    <div className="user-bookings-buttons-div">
-                        <button className={update_class} onClick={this.handleUpdateClick}>Edit Booking</button>
-                        {disabled_triangle}
-                        {disabled_message}
-
-                    </div>
-
-                    <div className="user-bookings-buttons-div">
-                        <button className={delete_class} onClick={this.handleDelete}>Delete Booking</button>
-                        {disabled_triangle}
-                        {disabled_message}
-
-                    </div>
-                </div>
-
+            <div>
+                <span>{this.props.start_date}</span>
+                <span>{this.props.end_date}</span>
             </div>
         );
     }
