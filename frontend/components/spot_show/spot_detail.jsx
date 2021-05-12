@@ -87,8 +87,9 @@ class SpotDetail extends React.Component {
                         <span><b>Accepts bookings:</b> 6 months out</span>
                     </div>
                 </div>
-            </div>
+                <div className="border"></div>
                 <ReviewList reviews={reviews} session={this.props.session} deleteReview={this.props.deleteReview} />
+            </div>
             </div>
 
         )

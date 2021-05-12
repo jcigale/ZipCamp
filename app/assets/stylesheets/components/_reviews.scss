@@ -1,0 +1,60 @@
+.spot-review {
+    font-family: "Calibre",
+    Helvetica,
+    Arial,
+    sans-serif;
+    color: #333333;
+    margin-top: 30px;
+    
+    .review-count  {
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 40px;
+    }
+}
+
+.review-title {
+    display: flex;
+    align-items: center;
+
+
+    img {
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+    };
+    .text {
+        color: #333333;
+        font-size: 18px;
+        font-weight: 540;
+    }
+}
+
+.body {
+    font-size: 13px;
+    margin-left: 70px;
+}
+
+.review-item {
+    margin-top: 25px;
+    font-weight: 400px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.helpful {
+    margin-top: 20px;
+    margin-left: 70px;
+    border: none;
+    background: #40d9ac;
+    color: white;
+    font-size: 13px;
+    padding: 10px;
+    width: 90px;
+}
+
+.helpful:hover {
+    background: #33AD89;
+    cursor: pointer;
+}

@@ -38,10 +38,13 @@ class ReviewListItem extends React.Component {
         // const delete_button = (this.props.session ? <button onClick={this.handleDelete} className="review-delete-button">Delete Review</button> : null )
 
         return (
-            <div>
-                <span>    
+            <div className='review-item'>
+                <div className='review-title'><img src={tent} /> <span className='text'>{this.props.review.title}</span></div>
+                <span className='body'>    
                     {this.props.review.body}
                 </span>
+                <button className='helpful'><i className="far fa-thumbs-up"></i> Helpful</button>
+                <div className="border"></div>
             </div>
         );
     }
