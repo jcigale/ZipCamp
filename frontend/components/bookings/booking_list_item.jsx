@@ -58,7 +58,7 @@ class BookingIndexItem extends React.Component {
         if (update_class === 'update-bookings-button-disabled') {
             disabled_message = (
                 <div className="disabled-message">
-                    <p>It is to late to edit this booking</p>
+                    <p>It's to late to edit this booking</p>
                 </div>);
         } else {
             disabled_message = null;
