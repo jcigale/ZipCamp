@@ -10,6 +10,7 @@ class BookingIndex extends React.Component {
     }
 
     componentDidMount() {
+        debugger
         this.props.fetchBookings(this.props.user.id)
     }
 

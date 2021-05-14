@@ -1,7 +1,8 @@
 export const fetchBookings = (userId) => {
+    
     return $.ajax({
         method: 'GET',
-        url: `api/users/${userId}/bookings`
+        url: `api/user/bookings`
     });
 }
 

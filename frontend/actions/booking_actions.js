@@ -14,13 +14,13 @@ const removeBooking = (bookingId) => ({
     bookingId
 });
 
-const receiveAllBookings = (bookings) => ({
+const receiveBookings = (bookings) => ({
     type: RECEIVE_BOOKINGS,
     bookings
 });
 
 export const fetchBookings = userId => dispatch => {
-    return APIUtil.fetchBookings(userId).then((bookings) => dispatch(receiveAllBookings(bookings)));
+    return APIUtil.fetchBookings(userId).then((bookings) => dispatch(receiveBookings(bookings)));
 }
 
 export const createBooking = booking => dispatch => {

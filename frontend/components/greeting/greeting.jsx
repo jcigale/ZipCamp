@@ -36,7 +36,7 @@ const Greeting = ({ currentUser, logout }) => {
             <div className='right-nav'>
                 <a href="https://www.linkedin.com/in/john-c-467b21ba/" target="_blank"><i className="fab fa-linkedin"></i></a>
                 <a href="https://github.com/jcigale" target="_blank"><i className="fab fa-github"></i></a>
-                <Link to={`/users/${currentUser.id}/trips`} className='triplink'><span className="trips">Trips</span></Link>
+                <Link to={`/users/${currentUser.id}/bookings`} className='triplink'><span className="trips">Trips</span></Link>
                 <button className="header-button" onClick={logout}><span>Log Out</span></button>
             </div>
         </nav>

@@ -57444,3 +57444,683 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/users/23/bookings" for ::1 at 2021-05-14 08:17:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/23/bookings"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/spots" for ::1 at 2021-05-14 08:17:58 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (2.4ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (4.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 85], ["spot_id", 86], ["spot_id", 87], ["spot_id", 88], ["spot_id", 89], ["spot_id", 90], ["spot_id", 91], ["spot_id", 92], ["spot_id", 93], ["spot_id", 94]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (2.8ms)
+  Rendered api/spots/_spot.json.jbuilder (0.8ms)
+  Rendered api/spots/_spot.json.jbuilder (2.0ms)
+  Rendered api/spots/_spot.json.jbuilder (0.9ms)
+  Rendered api/spots/_spot.json.jbuilder (0.3ms)
+  Rendered api/spots/_spot.json.jbuilder (1.3ms)
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  Rendered api/spots/_spot.json.jbuilder (0.7ms)
+  Rendered api/spots/index.json.jbuilder (28.2ms)
+Completed 200 OK in 33ms (Views: 24.2ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/api/spots/88" for ::1 at 2021-05-14 08:17:59 -0400
+Processing by Api::SpotsController#show as JSON
+  Parameters: {"id"=>"88"}
+  [1m[36mSpot Load (0.7ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/controllers/api/spots_controller.rb:9
+  Rendering api/spots/show.json.jbuilder
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 88]]
+  ↳ app/views/api/spots/show.json.jbuilder:2
+  Rendered api/spots/_spot.json.jbuilder (0.3ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 88]]
+  ↳ app/views/api/spots/show.json.jbuilder:6
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  ↳ app/views/api/spots/show.json.jbuilder:6
+  Rendered api/reviews/_review.json.jbuilder (0.1ms)
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 88]]
+  ↳ app/views/api/spots/show.json.jbuilder:19
+  Rendered api/spots/show.json.jbuilder (7.5ms)
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/spots/88" for ::1 at 2021-05-14 08:18:11 -0400
+Processing by Api::SpotsController#show as JSON
+  Parameters: {"id"=>"88"}
+  [1m[36mSpot Load (1.0ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/controllers/api/spots_controller.rb:9
+  Rendering api/spots/show.json.jbuilder
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 88]]
+  ↳ app/views/api/spots/show.json.jbuilder:2
+  Rendered api/spots/_spot.json.jbuilder (0.3ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 88]]
+  ↳ app/views/api/spots/show.json.jbuilder:6
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  ↳ app/views/api/spots/show.json.jbuilder:6
+  Rendered api/reviews/_review.json.jbuilder (0.2ms)
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 88]]
+  ↳ app/views/api/spots/show.json.jbuilder:19
+  Rendered api/spots/show.json.jbuilder (4.7ms)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/users/23/bookings" for ::1 at 2021-05-14 08:18:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/23/bookings"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/spots" for ::1 at 2021-05-14 08:18:37 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (1.2ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 85], ["spot_id", 86], ["spot_id", 87], ["spot_id", 88], ["spot_id", 89], ["spot_id", 90], ["spot_id", 91], ["spot_id", 92], ["spot_id", 93], ["spot_id", 94]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.3ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  Rendered api/spots/_spot.json.jbuilder (0.2ms)
+  Rendered api/spots/_spot.json.jbuilder (0.7ms)
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/index.json.jbuilder (11.1ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/spots/86" for ::1 at 2021-05-14 08:18:38 -0400
+Processing by Api::SpotsController#show as JSON
+  Parameters: {"id"=>"86"}
+  [1m[36mSpot Load (0.6ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/api/spots_controller.rb:9
+  Rendering api/spots/show.json.jbuilder
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 86]]
+  ↳ app/views/api/spots/show.json.jbuilder:2
+  Rendered api/spots/_spot.json.jbuilder (0.3ms)
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 86]]
+  ↳ app/views/api/spots/show.json.jbuilder:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  ↳ app/views/api/spots/show.json.jbuilder:6
+  Rendered api/reviews/_review.json.jbuilder (0.2ms)
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 86]]
+  ↳ app/views/api/spots/show.json.jbuilder:19
+  Rendered api/spots/show.json.jbuilder (7.8ms)
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/api/spots/86" for ::1 at 2021-05-14 08:18:42 -0400
+Processing by Api::SpotsController#show as JSON
+  Parameters: {"id"=>"86"}
+  [1m[36mSpot Load (0.4ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/api/spots_controller.rb:9
+  Rendering api/spots/show.json.jbuilder
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 86]]
+  ↳ app/views/api/spots/show.json.jbuilder:2
+  Rendered api/spots/_spot.json.jbuilder (0.8ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 86]]
+  ↳ app/views/api/spots/show.json.jbuilder:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  ↳ app/views/api/spots/show.json.jbuilder:6
+  Rendered api/reviews/_review.json.jbuilder (0.4ms)
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 86]]
+  ↳ app/views/api/spots/show.json.jbuilder:19
+  Rendered api/spots/show.json.jbuilder (4.5ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2021-05-14 08:18:42 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (1.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (8.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 293ms (Views: 289.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-05-14 08:18:48 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (0.6ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 85], ["spot_id", 86], ["spot_id", 87], ["spot_id", 88], ["spot_id", 89], ["spot_id", 90], ["spot_id", 91], ["spot_id", 92], ["spot_id", 93], ["spot_id", 94]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.3ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/index.json.jbuilder (7.6ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2021-05-14 08:18:49 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-05-14 08:18:49 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (0.5ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 85], ["spot_id", 86], ["spot_id", 87], ["spot_id", 88], ["spot_id", 89], ["spot_id", 90], ["spot_id", 91], ["spot_id", 92], ["spot_id", 93], ["spot_id", 94]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.3ms)
+  Rendered api/spots/_spot.json.jbuilder (0.5ms)
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/index.json.jbuilder (6.7ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/spots/88" for ::1 at 2021-05-14 08:18:50 -0400
+Processing by Api::SpotsController#show as JSON
+  Parameters: {"id"=>"88"}
+  [1m[36mSpot Load (0.6ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/controllers/api/spots_controller.rb:9
+  Rendering api/spots/show.json.jbuilder
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 88]]
+  ↳ app/views/api/spots/show.json.jbuilder:2
+  Rendered api/spots/_spot.json.jbuilder (0.3ms)
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 88]]
+  ↳ app/views/api/spots/show.json.jbuilder:6
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  ↳ app/views/api/spots/show.json.jbuilder:6
+  Rendered api/reviews/_review.json.jbuilder (0.5ms)
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 88]]
+  ↳ app/views/api/spots/show.json.jbuilder:19
+  Rendered api/spots/show.json.jbuilder (5.4ms)
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/users/23/bookings" for ::1 at 2021-05-14 08:18:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/23/bookings"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-05-14 08:21:38 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (1.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 237ms (Views: 235.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-14 08:21:50 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (1.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2021-05-14 08:21:52 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-05-14 08:22:24 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 247ms (Views: 245.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/users/23/bookings" for ::1 at 2021-05-14 08:22:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/23/bookings"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/users/23/bookings" for ::1 at 2021-05-14 08:25:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/23/bookings"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-05-14 08:26:28 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (1.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 247ms (Views: 245.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/users/23/bookings" for ::1 at 2021-05-14 08:27:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/23/bookings"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/users/23/bookings" for ::1 at 2021-05-14 08:28:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/23/bookings"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/users/23/bookings" for ::1 at 2021-05-14 08:28:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/23/bookings"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/users/23/bookings" for ::1 at 2021-05-14 08:31:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/23/bookings"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/user/23/bookings" for ::1 at 2021-05-14 08:32:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/user/23/bookings"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/user/bookings" for ::1 at 2021-05-14 08:33:16 -0400
+Processing by Api::BookingsController#index as JSON
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-05-14 08:33:38 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (1.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 292ms (Views: 289.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/users/bookings" for ::1 at 2021-05-14 08:33:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/bookings"):
+  
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-05-14 08:33:55 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 244ms (Views: 243.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/user/bookings" for ::1 at 2021-05-14 08:34:01 -0400
+Processing by Api::BookingsController#index as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.2ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/bookings/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/jcigale/Dropbox/My Mac (TheButtonMashee)/Desktop/ZipCamp/app/views":
+  app/controllers/api/bookings_controller.rb:5:in `index'
+
+Started GET "/" for ::1 at 2021-05-14 08:38:40 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (15.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (89.7ms)
+Completed 200 OK in 110ms (Views: 34.4ms | ActiveRecord: 74.6ms)
+
+
+Started GET "/api/user/bookings" for ::1 at 2021-05-14 08:38:46 -0400
+Processing by Api::BookingsController#index as JSON
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering api/bookings/index.json.jbuilder
+  Rendered api/bookings/_booking.json.jbuilder (10.9ms)
+  Rendered api/bookings/index.json.jbuilder (12.1ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 2.6ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/views/api/bookings/_booking.json.jbuilder:1:in `_app_views_api_bookings__booking_json_jbuilder___3735590002274668931_63020'
+  app/views/api/bookings/index.json.jbuilder:2:in `block in _app_views_api_bookings_index_json_jbuilder__871696969809780478_62980'
+  app/views/api/bookings/index.json.jbuilder:1:in `_app_views_api_bookings_index_json_jbuilder__871696969809780478_62980'
+  app/controllers/api/bookings_controller.rb:5:in `index'
+
