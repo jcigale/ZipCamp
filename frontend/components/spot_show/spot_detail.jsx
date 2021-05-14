@@ -2,7 +2,8 @@ import React from 'react';
 import {icons} from '../../util/icon_hash';
 import { withRouter } from 'react-router-dom';
 import ReviewList from '../reviews/review_list';
-import ReviewFormContainer from './booking_form_container';
+import ReviewForm from './review_form';
+import createBooking from '../../actions/review_actions';
 
 const activitiesList = (spot) => {
     return (
@@ -89,6 +90,8 @@ class SpotDetail extends React.Component {
                 </div>
                 <div className="border"></div>
                 <ReviewList reviews={reviews} session={this.props.session} deleteReview={this.props.deleteReview} />
+                <button className='leave-review'>Leave a Review</button>
+                <ReviewForm createBooking={createBooking} />
             </div>
             </div>
 

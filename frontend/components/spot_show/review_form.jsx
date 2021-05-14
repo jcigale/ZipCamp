@@ -6,6 +6,7 @@ class ReviewForm extends React.Component {
         super(props);
         this.state = {
             recommended: true,
+            title: '',
             body: '',
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,13 +28,16 @@ class ReviewForm extends React.Component {
             <div className='review-form'>
                 <form onSubmit={this.handleSubmit}>
                     <label>Do you recommend this location?
-                        <input type="radio" value={this.state.recommended = true} onChange={this.update('recommended')} checked>Yes</input>
-                        <input type="radio" value={this.state.recommended = false} onChange={this.update('recommended')} checked>No</input>
+                        <input type="radio" value='Yes' onChange={this.update('recommended')} checked/>
+                        <input type="radio" value='No' onChange={this.update('recommended')} checked/>
+                    </label>
+                    <label>Title
+                        <text value={this.state.title} onChange={this.update('title')}/>
                     </label>
                     <label>Review
                         <textarea value={this.state.body} onChange={this.update('body')}/>
                     </label>
-                    <button tyo='submit'>Leave Review</button>
+                    <button type='submit'>Leave Review</button>
                 </form>
             </div>
         )
