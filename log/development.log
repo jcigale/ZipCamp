@@ -56946,3 +56946,109 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/spots" for ::1 at 2021-05-14 07:54:13 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (9.1ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (8.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 85], ["spot_id", 86], ["spot_id", 87], ["spot_id", 88], ["spot_id", 89], ["spot_id", 90], ["spot_id", 91], ["spot_id", 92], ["spot_id", 93], ["spot_id", 94]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (3.4ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.3ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.6ms)
+  Rendered api/spots/_spot.json.jbuilder (0.7ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  Rendered api/spots/index.json.jbuilder (32.7ms)
+Completed 200 OK in 36ms (Views: 17.6ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/api/spots/88" for ::1 at 2021-05-14 07:54:15 -0400
+Processing by Api::SpotsController#show as JSON
+  Parameters: {"id"=>"88"}
+  [1m[36mSpot Load (1.0ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/controllers/api/spots_controller.rb:9
+  Rendering api/spots/show.json.jbuilder
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 88]]
+  ↳ app/views/api/spots/show.json.jbuilder:2
+  Rendered api/spots/_spot.json.jbuilder (0.6ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 88]]
+  ↳ app/views/api/spots/show.json.jbuilder:6
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  ↳ app/views/api/spots/show.json.jbuilder:6
+  Rendered api/reviews/_review.json.jbuilder (0.2ms)
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 88]]
+  ↳ app/views/api/spots/show.json.jbuilder:19
+  Rendered api/spots/show.json.jbuilder (14.2ms)
+Completed 200 OK in 20ms (Views: 7.5ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/" for ::1 at 2021-05-14 07:56:22 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (6.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (10.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 334ms (Views: 322.2ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/" for ::1 at 2021-05-14 07:56:25 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Mc6m9QRW8eI8ANWG8MfVxg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mBooking Load (1.0ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 23]]
+  ↳ app/views/api/users/_user.json.jbuilder:3
+  Rendered api/users/_user.json.jbuilder (2.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/spots" for ::1 at 2021-05-14 07:56:26 -0400
+Processing by Api::SpotsController#index as JSON
+  Rendering api/spots/index.json.jbuilder
+  [1m[36mSpot Load (1.9ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  [1m[36mReview Load (2.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["spot_id", 85], ["spot_id", 86], ["spot_id", 87], ["spot_id", 88], ["spot_id", 89], ["spot_id", 90], ["spot_id", 91], ["spot_id", 92], ["spot_id", 93], ["spot_id", 94]]
+  ↳ app/views/api/spots/index.json.jbuilder:1
+  Rendered api/spots/_spot.json.jbuilder (0.9ms)
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  Rendered api/spots/_spot.json.jbuilder (0.4ms)
+  Rendered api/spots/_spot.json.jbuilder (0.7ms)
+  Rendered api/spots/_spot.json.jbuilder (0.9ms)
+  Rendered api/spots/_spot.json.jbuilder (0.7ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.1ms)
+  Rendered api/spots/_spot.json.jbuilder (0.7ms)
+  Rendered api/spots/index.json.jbuilder (30.8ms)
+Completed 200 OK in 32ms (Views: 27.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/api/spots/88" for ::1 at 2021-05-14 07:56:28 -0400
+Processing by Api::SpotsController#show as JSON
+  Parameters: {"id"=>"88"}
+  [1m[36mSpot Load (1.1ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/controllers/api/spots_controller.rb:9
+  Rendering api/spots/show.json.jbuilder
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "reviews"."id" FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 88]]
+  ↳ app/views/api/spots/show.json.jbuilder:2
+  Rendered api/spots/_spot.json.jbuilder (0.7ms)
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 88]]
+  ↳ app/views/api/spots/show.json.jbuilder:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  ↳ app/views/api/spots/show.json.jbuilder:6
+  Rendered api/reviews/_review.json.jbuilder (0.5ms)
+  [1m[36mCACHE Review Load (0.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."spot_id" = $1[0m  [["spot_id", 88]]
+  ↳ app/views/api/spots/show.json.jbuilder:19
+  Rendered api/spots/show.json.jbuilder (8.2ms)
+Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 3.0ms)
+
+
