@@ -14,7 +14,7 @@ const SpotShow = ({ spot, spotId, state, fetchSpot }) => {
     return (
         <div className='spot-show'>
             <SpotDetail  spot={spot}  state={state} reviews={spot.reviews}/>
-            <BookingForm spot={spot} createBooking={createBooking}/>
+            <BookingForm spot={spot} createBooking={createBooking} session={state.session}/>
             <SpotMap spots={spots} spotId= {spotId} singleSpot={true} fetchSpot={fetchSpot}/>
         </div>
     )

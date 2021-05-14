@@ -14,11 +14,11 @@ class BookingForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        //debugger
+        debugger
         const spotId = parseInt(this.props.match.params.spotId);
         const booking = Object.assign({}, this.state, { spot_id: spotId });
         this.props.createBooking(booking);
-        this.props.history.push(`/users/${this.props.session}/bookings`);
+        this.props.history.push(`/users/${this.props.session.id}/bookings`);
     }
 
 

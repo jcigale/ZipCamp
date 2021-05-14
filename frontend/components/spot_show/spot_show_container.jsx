@@ -13,7 +13,8 @@ const mapStateToProps = (state, {match}) => {
         spotId: spotId,
         spot: state.entities.spots[match.params.spotId],
         reviews: state.entities.reviews,
-        session: state.session.id
+        session: state.session.id,
+        state: state
     };
 }
 
