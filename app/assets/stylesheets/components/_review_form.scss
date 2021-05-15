@@ -1,0 +1,7 @@
+.review-form {
+    display: none;
+}
+
+.review-form.is-open {
+    display: flex;
+}

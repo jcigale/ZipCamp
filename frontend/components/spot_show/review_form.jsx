@@ -32,13 +32,14 @@ class ReviewForm extends React.Component {
                         <input type="radio" value='No' onChange={this.update('recommended')} checked/>
                     </label>
                     <label>Title
-                        <text value={this.state.title} onChange={this.update('title')}/>
+                        <textarea value={this.state.title} onChange={this.update('title')}/>
                     </label>
                     <label>Review
                         <textarea value={this.state.body} onChange={this.update('body')}/>
                     </label>
                     <button type='submit'>Leave Review</button>
                 </form>
+                <div className='review-screen'></div>
             </div>
         )
     }

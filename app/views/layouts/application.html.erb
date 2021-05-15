@@ -43,5 +43,21 @@
 
       }); 
   </script>
+
+   <script>
+      $(function(){
+
+      $("body").on("click", ".leave-review", function(event){
+        event.preventDefault();
+        $(".review-form").addClass("is-open");
+      });
+
+      $("body").on("click", ".review-screen", function(event){
+        event.preventDefault();
+        $(".review-form").removeClass("is-open");
+      });
+
+      }); 
+  </script>
   </body>
 </html>
