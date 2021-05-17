@@ -13,6 +13,7 @@ class ReviewForm extends React.Component {
     }
 
     handleSubmit(e) {
+        debugger
         e.preventDefault();
         const spotId = parseInt(this.props.match.params.spotId);
         const review = Object.assign({}, this.state, { spot_id: spotId });
@@ -25,21 +26,25 @@ class ReviewForm extends React.Component {
 
     render() {
         return (
+            <div>
             <div className='review-form'>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Do you recommend this location?
-                        <input type="radio" value='Yes' onChange={this.update('recommended')} checked/>
-                        <input type="radio" value='No' onChange={this.update('recommended')} checked/>
-                    </label>
                     <label>Title
-                        <textarea value={this.state.title} onChange={this.update('title')}/>
+                        <input type='text' value={this.state.title} onChange={this.update('title')}/>
                     </label>
                     <label>Review
                         <textarea value={this.state.body} onChange={this.update('body')}/>
                     </label>
-                    <button type='submit'>Leave Review</button>
+                    <label>Do you recommend this location?
+                        <span>Yes</span>
+                        <input type="radio" value={true} onChange={this.update('recommended')} />
+                        <span>No</span>
+                        <input type="radio" value={false} onChange={this.update('recommended')} />
+                    </label>
+                    <button className='submit-review' type='submit' onClick={this.handleSubmit} >Leave Review</button>
                 </form>
-                <div className='review-screen'></div>
+            </div>
+
             </div>
         )
     }

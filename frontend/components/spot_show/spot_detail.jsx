@@ -3,7 +3,7 @@ import {icons} from '../../util/icon_hash';
 import { withRouter } from 'react-router-dom';
 import ReviewList from '../reviews/review_list';
 import ReviewForm from './review_form';
-import createBooking from '../../actions/review_actions';
+import { createReview } from '../../actions/review_actions';
 
 const activitiesList = (spot) => {
     return (
@@ -91,8 +91,9 @@ class SpotDetail extends React.Component {
                 <div className="border"></div>
                 <ReviewList reviews={reviews} session={this.props.session} deleteReview={this.props.deleteReview} />
                 <button className='leave-review'>Leave a Review</button>
-                <ReviewForm createBooking={createBooking} />
+                <ReviewForm createReview={createReview} />
             </div>
+                <div className='review-screen'></div>
             </div>
 
         )
