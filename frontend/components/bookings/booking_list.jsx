@@ -2,17 +2,17 @@ import React from 'react';
 import BookingListItem from './booking_list_item';
 import ReviewListItem from '../reviews/review_list_item';
 
-class BookingIndex extends React.Component {
+class BookingList extends React.Component {
     constructor(props) {
         super(props)
         this.state = { showing: 'Trips' }
         this.handleReviewClick = this.handleReviewClick.bind(this);
     }
 
-    componentDidMount() {
-        debugger
-        this.props.fetchBookings(this.props.user.id)
-    }
+    // componentDidMount() {
+    //     debugger
+    //     this.props.fetchBookings(this.props.user.id)
+    // }
 
     handleReviewClick(id) {
         return e => {
@@ -22,13 +22,12 @@ class BookingIndex extends React.Component {
     }
 
     render() {
-        debugger 
 
         if (!(this.props.session === this.props.user.id)) {
             this.props.history.push("/");
         }
+        debugger
         const trips = this.props.user.bookings.reverse().map(trip => <BookingListItem key={trip.id} trip={trip} delete={this.props.deleteBooking} update={this.props.updateBooking} history={this.props.history} />)
-
         return (
            <div className='booking'>
                <div className='bio'>
@@ -39,7 +38,7 @@ class BookingIndex extends React.Component {
                     <span><i className="fas fa-heart"></i> Zipcamper since May 2021</span>
                </div>
                <div className='trips'>
-                   <span>{this.props.bookings.length} Trips</span>
+                   <span>{this.props.user.bookings.length} Trips</span>
                    {trips}
                </div>
 
@@ -49,4 +48,4 @@ class BookingIndex extends React.Component {
 
 }
 
-export default BookingIndex;
+export default BookingList;

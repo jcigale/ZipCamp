@@ -1,6 +1,6 @@
 import React from 'react';
 
-class BookingIndexItem extends React.Component {
+class BookingListItem extends React.Component {
     constructor(props) {
         super(props);
         this.handleDelete = this.handleDelete.bind(this);
@@ -47,36 +47,21 @@ class BookingIndexItem extends React.Component {
         window.scrollTo(0, 0);
     }
 
-    render() {
-        const spot = this.props.trip.spot;
-        const start_date_disabled = new Date(parseInt(this.props.trip.start_date.split("-")[0]), parseInt(this.props.trip.start_date.split("-")[1]) - 1, parseInt(this.props.trip.start_date.split("-")[2].slice(0, 2)));
-
-        const update_class = (new Date() < start_date_disabled) ? 'update-bookings-button' : 'update-bookings-button-disabled';
-        const delete_class = (new Date() < start_date_disabled) ? 'delete-bookings-button' : 'delete-bookings-button-disabled';
-
-        let disabled_message;
-        if (update_class === 'update-bookings-button-disabled') {
-            disabled_message = (
-                <div className="disabled-message">
-                    <p>It's to late to edit this booking</p>
-                </div>);
-        } else {
-            disabled_message = null;
-        }
-
-        let disabled_triangle;
-        if (update_class === 'update-bookings-button-disabled') {
-            disabled_triangle = (
-                <div className="disabled-message-triangle"></div>
-            );
-        } else {
-            disabled_triangle = null;
-        }
+    render() {  
 
         return (
             <div>
-                <span>{this.props.start_date}</span>
-                <span>{this.props.end_date}</span>
+                <div className='spot-index-item' >
+                    <img src={this.props.trip.photo_url} />
+                    <div className="spot-info">
+
+                        <span className='spot-title'>{this.props.trip.title}</span>
+                        <div className='price-type'>
+                            <span className='spot-type'>{spot_type}</span>
+                            <span className='spot-price'>${price}<span>/NIGHT</span></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
@@ -84,4 +69,4 @@ class BookingIndexItem extends React.Component {
 
 }
 
-export default BookingIndexItem;
+export default BookingListItem;
