@@ -48,17 +48,22 @@ class BookingListItem extends React.Component {
     }
 
     render() {  
+        debugger
+        const spot = this.props.trip.spot
 
         return (
             <div>
                 <div className='spot-index-item' >
-                    <img src={this.props.trip.photo_url} />
+                    <img src={spot.photo_url} />
                     <div className="spot-info">
 
-                        <span className='spot-title'>{this.props.trip.title}</span>
+                        <span className='spot-title'>{spot.title}</span>
                         <div className='price-type'>
-                            <span className='spot-type'>{spot_type}</span>
-                            <span className='spot-price'>${price}<span>/NIGHT</span></span>
+                            <span className='spot-type'>{spot.spot_type}</span>
+                            <span className='spot-price'>${spot.price}<span>/NIGHT</span></span>
+                        </div>
+                        <div className='booking-time'>
+                            <span>{this.props.trip.start_date} - {this.props.trip.end_date}</span>
                         </div>
                     </div>
                 </div>
