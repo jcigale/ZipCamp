@@ -36,7 +36,9 @@
         border-radius: 1px;
     }
 
-    input::placeholder, input[type="text"] {
+    input::placeholder,
+    input[type="text"],
+    input[type='password'] {
         padding-left: 16px;
         font-family: Calibre,
         Helvetica,
