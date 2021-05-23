@@ -7,7 +7,7 @@ class BookingForm extends React.Component {
         this.state = {
             start_date: '',
             end_date: '',
-            guests: '',
+            guests: 1,
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -40,20 +40,20 @@ class BookingForm extends React.Component {
                     <div className='in'>
                         <div className='text'>
                         <label>Check in</label>
-                        <input type="date" placeholder='Select date'/>
+                                <input type="date" placeholder='Select date' onChange={this.update('start_date')}/>
                         </div>
                     </div>
                     <div className='out'>
                         <div className='text'>
                         <label>Check out</label>
-                        <input type="date" placeholder='Select date'/>
+                                <input type="date" placeholder='Select date' onChange={this.update('end_date')}/>
                         </div>
                     </div>
                 </div>
                 <div className='guests'>
                     <div className='text'>
                     <label>Guests</label>
-                    <select name="" id="">
+                            <select name="" id="" onChange={this.update('guests')}>
                         <option value="1">1 guest</option>
                         <option value="2">2 guests</option>
                         <option value="3">3 guests</option>
