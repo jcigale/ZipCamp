@@ -9,7 +9,7 @@ class Api::ReviewsController < ApplicationController
         @review = current_user.reviews.new(review_params)
 
         if @review.save
-            render "api/spots/#{@review.spot_id}"
+            render :show
         else
             render json: @review, status: :unprocessable_entity
         end

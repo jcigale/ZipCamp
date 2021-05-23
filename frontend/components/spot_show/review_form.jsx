@@ -13,8 +13,8 @@ class ReviewForm extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
-        e.preventDefault();
+ 
+        //e.preventDefault();
         const spotId = parseInt(this.props.match.params.spotId);
         const review = Object.assign({}, this.state, { spot_id: spotId });
         this.props.createReview(review);
@@ -41,7 +41,7 @@ class ReviewForm extends React.Component {
                         <span>No</span>
                         <input type="radio" value={false} onChange={this.update('recommended')} />
                     </label>
-                    <button className='submit-review' type='submit' onClick={this.handleSubmit} >Leave Review</button>
+                    <button className='submit-review' type='submit'>Leave Review</button>
                 </form>
             </div>
 

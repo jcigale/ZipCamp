@@ -21,6 +21,7 @@ const removeReview = (reviewId) => ({
 });
 
 export const createReview = (review) => dispatch => {
+    debugger
     return APIUtil.createReview(review).then((review) => dispatch(receiveReview(review)))
 }
 

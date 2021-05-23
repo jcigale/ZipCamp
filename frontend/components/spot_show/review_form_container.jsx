@@ -1,5 +1,6 @@
+import React from 'react'
 import { connect } from 'react-redux';
-import { createReview } from '../../actions/spot_actions';
+import { createReview } from '../../actions/review_actions';
 import ReviewForm from './review_form';
 
 const mapDispatchToProps = dispatch => ({
