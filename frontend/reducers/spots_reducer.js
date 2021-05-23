@@ -9,14 +9,6 @@ const spotsReducer = (state = {}, action) => {
     case RECEIVE_SPOT:
       const newSpot = { [action.spot.id]: action.spot };
       return Object.assign({}, state, newSpot)
-    // case RECEIVE_REVIEW:
-    //   const { review } = action;
-    //   const newState = Object.assign({}, state);
-    //   newState[review.spot_id].reviewIds.push(review.id);
-    // case RECEIVE_BOOKING:
-    //   const { booking } = action;
-    //   const newState = Object.assign({}, state);
-    //   newState[booking.user_id].bookingIds.push(booking.id);
     default:
       return state;
   }

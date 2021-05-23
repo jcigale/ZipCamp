@@ -58,11 +58,13 @@
         transition: border-bottom 0.25s ease 0s;
     }
 
-    .triplink {
+    .triplink, .logout {
         text-decoration: none;
         padding-left: 12px;
         padding-right: 5px;
     }
+
+   
 }
 
 .covid-header {

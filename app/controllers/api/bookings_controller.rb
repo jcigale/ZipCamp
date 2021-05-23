@@ -13,7 +13,7 @@ class Api::BookingsController < ApplicationController
         @booking = current_user.bookings.new(booking_params)
 
         if @booking.save 
-            render :show
+            render "api/bookings/show"
         else
             render json: @booking, status: :unprocessable_entity
         end

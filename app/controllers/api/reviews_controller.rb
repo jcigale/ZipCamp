@@ -2,7 +2,7 @@ class Api::ReviewsController < ApplicationController
     before_action :require_logged_in
 
     def index
-        render :index
+        @reviews = Review.includes(:user).where(spot_id: params[:spot_id])
     end
 
     def create
