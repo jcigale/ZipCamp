@@ -23,11 +23,11 @@ class BookingList extends React.Component {
 
     render() {
         debugger
-
+   
         if (!(this.props.session === this.props.user.id)) {
             this.props.history.push("/");
         }
-        const trips = this.props.user.bookings.reverse().map(trip => <BookingListItem key={trip.id} trip={trip} delete={this.props.deleteBooking} update={this.props.updateBooking} history={this.props.history} />)
+        const trips = this.props.user.bookings.reverse().map(trip => <BookingListItem key={trip.id} trip={trip} delete={this.props.deleteBooking} update={this.props.updateBooking} history={this.props.history} fetchSpot={this.props.fetchSpot} />)
         return (
            <div className='booking'>
                <div className='bio'>

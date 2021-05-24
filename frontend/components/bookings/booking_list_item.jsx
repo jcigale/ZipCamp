@@ -49,7 +49,7 @@ class BookingListItem extends React.Component {
 
     render() {  
         debugger
-        const spot = this.props.trip.spot
+        const spot = this.props.fetchSpot(this.props.trip.spotId)
 
         return (
             <div>
