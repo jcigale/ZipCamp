@@ -53,15 +53,15 @@ class BookingListItem extends React.Component {
 
         return (
             <div>
-                {/* <div className='spot-index-item' > */}
-                    {/* <img src={spot.photo_url} />
+                <div className='spot-index-item' >
+                  <img src={spot.photo_url} />
                     <div className="spot-info">
 
                         <span className='spot-title'>{spot.title}</span>
                         <div className='price-type'>
                             <span className='spot-type'>{spot.spot_type}</span>
                             <span className='spot-price'>${spot.price}<span>/NIGHT</span></span>
-                        </div> */}
+                        </div>
                         <div className='booking-time'>
                             <span>{this.props.trip.start_date} - {this.props.trip.end_date}</span>
                         </div>

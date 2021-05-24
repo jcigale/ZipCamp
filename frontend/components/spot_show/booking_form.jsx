@@ -28,7 +28,6 @@ class BookingForm extends React.Component {
 
     render() {
         return (
-            <div className='book-box' >
                 <form className='booking-form' onSubmit={this.handleSubmit}>
                 <div className='price'>
                     <div className='text'>
@@ -67,7 +66,6 @@ class BookingForm extends React.Component {
                     <button type='submit'>Book for free</button>
                 </div>
                 </form>
-            </div>
         )
     }
 }

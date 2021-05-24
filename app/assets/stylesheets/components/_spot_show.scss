@@ -63,14 +63,14 @@
 }
 
 .booking-form {
-    position: fixed;
+    position: sticky;
     top: 0;
+    bottom: 10px;
     background: white;
     border: 2px solid #ebebeb;
     margin-left: 70%;
     height: 285px;
     width: 317px;
-    bottom: 10px;
     border-radius: 3px;
     font-family: "Calibre",
     Helvetica,

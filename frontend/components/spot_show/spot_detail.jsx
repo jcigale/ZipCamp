@@ -23,7 +23,6 @@ class SpotDetail extends React.Component {
         super(props)
     }
 
-
     render() {
         const reviews = this.props.reviews ? Object.values(this.props.reviews) : []
 

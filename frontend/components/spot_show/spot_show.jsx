@@ -15,7 +15,7 @@ class SpotShow extends React.Component {
         debugger
         let spotId = parseInt(this.props.match.params.spotId);
         this.props.fetchSpot(spotId);
-        this.props.fetchAllReview(spotId);
+        // this.props.fetchAllReview(spotId);
     }
 
     render() {
