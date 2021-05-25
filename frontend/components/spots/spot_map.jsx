@@ -89,7 +89,7 @@ class SpotMap extends React.Component {
         if (this.props.singleSpot) {
             const targetSpotKey = Object.keys(this.props.spots)[0];
             const targetSpot = this.props.spots[targetSpotKey];
-            this.MarkerManager.updateMarkers([targetSpot]); //grabs only that one bench
+            this.MarkerManager.updateMarkers([targetSpot]); 
         } else {
             this.MarkerManager.updateMarkers(this.props.spots);
         }
