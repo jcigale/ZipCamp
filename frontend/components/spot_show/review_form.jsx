@@ -13,11 +13,11 @@ class ReviewForm extends React.Component {
     }
 
     handleSubmit(e) {
- 
-        //e.preventDefault();
+        debugger
         const spotId = parseInt(this.props.match.params.spotId);
         const review = Object.assign({}, this.state, { spot_id: spotId });
         this.props.createReview(review);
+        location.reload()
     }
 
     update(field) {
@@ -35,13 +35,14 @@ class ReviewForm extends React.Component {
                     <label>Review
                         <textarea value={this.state.body} onChange={this.update('body')}/>
                     </label>
-                    <label>Do you recommend this location?
+                    {/* <label>Do you recommend this location?
                         <span>Yes</span>
                         <input type="radio" value={true} onChange={this.update('recommended')} />
                         <span>No</span>
                         <input type="radio" value={false} onChange={this.update('recommended')} />
-                    </label>
+                    </label> */}
                     <button className='submit-review' type='submit'>Leave Review</button>
+                    <button className='review-exit'>Close</button>
                 </form>
             </div>
 
