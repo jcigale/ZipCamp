@@ -2,7 +2,7 @@ class Api::BookingsController < ApplicationController
     before_action :require_logged_in
 
     def index
-        render :index
+        @bookings = Booking.includes(:spot).where(user_id: params[:user_id])
     end
 
     def show
@@ -20,9 +20,17 @@ class Api::BookingsController < ApplicationController
     end
 
     def destroy
-        @booking = current_user.bookings.find(params[:id])
+        @booking = Booking.find(params[:id])
         @booking.destroy
-        render "api/users/#{@booking.user_id}"
+    end
+
+    def update
+        @booking = Booking.find(params[:id])
+        if @booking.update(booking_params)
+            render "api/bookings/show"
+        else
+            render json: @booking.errors.full_messages, status: 422
+        end
     end
 
 
