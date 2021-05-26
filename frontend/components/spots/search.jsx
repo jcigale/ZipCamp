@@ -2,16 +2,50 @@ import React from 'react';
 import SpotIndex from './spot_index';
 import SpotMap from './spot_map';
 import FilterForm from './filter_form';
+import { render } from 'react-dom';
+class Search extends React.Component {
 
-const Search = ({ spots, spotType, updateFilter}) => (
-    <div>
-        <FilterForm spotType={spotType} updateFilter={updateFilter}/> 
-        <div className='map-spots'>
-        <SpotIndex spots={spots} spotType={spotType} />
-        <SpotMap spots={spots} updateFilter={updateFilter} />
-        </div>
-    </div>
-)
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            mapLocation: "",
+            lat: 37.8651,
+            lng: 119.5383
+        };
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleInput = this.handleInput.bind(this);
+    }
+
+    handleInput(e) {
+        this.setState({
+            mapLocation: e.target.value
+        });
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.receiveLocation(this.state);
+        this.props.history.push({
+            pathname: `/search/${this.state.lat},${this.state.lng}`,
+            state: this.state
+        });
+    }
+
+
+    render() {
+        return (
+            <div>
+                <FilterForm spotType={spotType} updateFilter={updateFilter}/> 
+                <div className='map-spots'>
+                <SpotIndex spots={spots} spotType={spotType} />
+                <SpotMap spots={spots} updateFilter={updateFilter} />
+                </div>
+            </div>
+        )
+    }
+}
 
 export default Search;
 

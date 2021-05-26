@@ -12,7 +12,8 @@ const mapStateToProps = state => {
 }  
 
 const mapDispatchToProps = dispatch => ({
-    updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
+    updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
+    receiveLocation: (location) => dispatch(receiveLocation(location))
 })
 
 export default connect(
