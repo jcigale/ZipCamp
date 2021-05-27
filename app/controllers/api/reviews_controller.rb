@@ -27,7 +27,8 @@ class Api::ReviewsController < ApplicationController
     def destroy
         @review = current_user.reviews.find(params[:id])
         @review.destroy
-        render "api/spots/#{@review.spot_id}"
+        # render "api/spots/#{@review.spot_id}"
+        render :show
     end
     private
 

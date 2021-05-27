@@ -17,6 +17,11 @@ class ReviewListItem extends React.Component {
     handleDelete(e) {
         e.preventDefault();
         this.props.deleteReview(this.props.review.id);
+        location.reload();
+    }
+
+    handleUpdate(e) {
+        e.preventDefault
     }
 
     dateFormat(date) {
@@ -35,7 +40,7 @@ class ReviewListItem extends React.Component {
     render() {
 
         const delete_button = (this.props.session === this.props.review.user_id ? <button onClick={this.handleDelete} className="review-delete-button">Delete Review</button> : null)
-        // const delete_button = (this.props.session ? <button onClick={this.handleDelete} className="review-delete-button">Delete Review</button> : null )
+        const edit_button = (this.props.session === this.props.review.user_id ? <button onClick={this.handleUpdate} className="review-edit-button">Edit Review</button> : null)
 
         return (
             <div className='review-item'>
@@ -43,7 +48,11 @@ class ReviewListItem extends React.Component {
                 <span className='body'>    
                     {this.props.review.body}
                 </span>
-                <button className='helpful'><i className="far fa-thumbs-up"></i> Helpful</button>
+                <div className='buttons'>
+                    <button className='helpful'><i className="far fa-thumbs-up"></i> Helpful</button>
+                    {edit_button}
+                    {delete_button}
+                </div>
                 <div className="border"></div>
             </div>
         );

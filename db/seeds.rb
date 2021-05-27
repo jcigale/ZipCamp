@@ -85,7 +85,7 @@ s7 = Spot.create({
     longitude:'-71.2831756',
     latitude:'42.040577',
     photo_url: 'https://images.goodsam.com/trailerlifedirectory/largefeatured/1000x/pho_300006485_01.jpg',
-    spot_type:'Campsite, RVs, Lodging',
+    spot_type:'RVs',
     details: {'state' => 'Massachusetts'},
     activities: ['Hiking', 'Biking', 'Sight seeing'],
     price: 56})
@@ -96,7 +96,7 @@ s8 = Spot.create({
     longitude:'-72.53643',
     latitude:'44.568742',
     photo_url: 'https://www.roverpass.com/system/pictures/images/000/025/935/full/mountain-view-campground-morrisville-vt-5.JPG?1487437117',
-    spot_type:'Campsite, RVs',
+    spot_type:'Campsite',
     details: {'state' => 'Vermont'},
     activities: ['Hiking', 'Winter sports', 'Sight seeing'],
     price: 54})
@@ -108,7 +108,7 @@ s9 = Spot.create({
     longitude:'-110.5662405',
     latitude:'44.3953541',
     photo_url: 'https://www.nps.gov/common/uploads/grid_builder/yell/crop16_9/13266D98-1DD8-B71B-0BE23ADC28F89F3F.jpg?width=465&quality=90&mode=crop',
-    spot_type:'Campsite, RVs',
+    spot_type:'Campsite',
     details: {'state' => 'Wyoming'},
     activities: ['Sight seeing', 'Biking', 'Hiking'],
     price: 74})

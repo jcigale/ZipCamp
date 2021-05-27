@@ -1,5 +1,5 @@
 export const icons = {
-    'ent': "fas fa-campground",
+    'tent': "fas fa-campground",
     'rv': "fas fa-caravan",
     'lodging': "fas fa-bed",
     'Biking': "fas fa-bicycle",
@@ -8,7 +8,7 @@ export const icons = {
     'Boating': "fas fa-ship",
     'Winter sports': "fas fa-skiing-nordic",
     'Fishing': "fas fa-fish",
-    'ampfire': "fas fa-fire",
+    'Campfire': "fas fa-fire",
     'pets': "fas fa-dog",
     'toilet': "fas fa-toilet-paper",
     'Sight seeing': "fas fa-binoculars"

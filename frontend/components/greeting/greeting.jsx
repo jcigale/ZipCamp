@@ -6,12 +6,7 @@ const Greeting = ({ currentUser, logout }) => {
         <nav className='nav-bar'>
             <div className='left-nav'>
                 <Link to='/'><img src={logo} alt="logo" /></Link>
-                <input
-                    id="nav-search"
-                    className="search"
-                    type="text"
-                    placeholder="Search Box"
-                />
+                
             </div>
             <div className='right-nav'>
                 <a href="https://www.linkedin.com/in/john-c-467b21ba/" target="_blank"><i className="fab fa-linkedin"></i></a>
@@ -25,12 +20,6 @@ const Greeting = ({ currentUser, logout }) => {
         <nav className='nav-bar'>
             <div className='left-nav'>
                 <Link to='/'><img src={logo} alt="logo" /></Link>
-                <input
-                    id='nav-search'
-                    className="search"
-                    type="text"
-                    placeholder="Search Box"
-                />
                 
             </div>
             <div className='right-nav'>

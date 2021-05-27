@@ -36,8 +36,6 @@ class Search extends React.Component {
     componentDidMount() {
         let input = document.getElementById('nav-search');
         let autocomplete = new google.maps.places.Autocomplete(input);
-
-        let mapLocation;
         let that = this;
         autocomplete.addListener('place_changed', () => {
             let address = autocomplete.getPlace().formatted_address;
@@ -45,7 +43,7 @@ class Search extends React.Component {
 
             let lat = place.geometry.location.lat();
             let lng = place.geometry.location.lng();
-            mapLocation = address ? address : autocomplete.getPlace().name;
+            let mapLocation = address ? address : autocomplete.getPlace().name;
             that.setState({
                 mapLocation: autocomplete.getPlace().name,
                 lat: lat,
