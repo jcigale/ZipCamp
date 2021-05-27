@@ -10,17 +10,109 @@
         margin-left: 10%;
         border: 1px solid rgb(229, 234, 223);
         border-radius: 2px;
+        height: 375px;
 
         .user {
             display: flex;
             flex-direction: row;
             align-items: center;
+            margin-bottom: 10px;
             img {
                 height: 70px;
                 width: 70px;
                 border-radius: 50%;
                 border: 1px solid rgb(229, 234, 223);
+                margin-right: 10px;
             }
         }
     }
+
+    .trips {
+        margin-left: 10%;
+
+        .num-trips {
+            font-weight: 500;
+            font-family: 'Calibre',
+            Arial,
+            Helvetica,
+            sans-serif;
+            font-size: 20px;
+        }
+    }
 }
+
+ .spot-index-item {
+     margin: 20px;
+     margin-bottom: 50px;
+
+     img {
+         border-radius: 5px;
+         width: 350px;
+         height: 200px;
+         padding-bottom: 15px;
+     }
+
+     .spot-title {
+         font-size: 20px;
+         color: #333333;
+         letter-spacing: 0.22px;
+         font-family: 'Calibre',
+             Arial,
+             Helvetica,
+             sans-serif;
+         font-weight: 400;
+     }
+
+     .price-type {
+         display: flex;
+         width: 100%;
+         align-items: center;
+         justify-content: space-between;
+         padding-top: 7px;
+         padding-bottom: 7px;
+         border-bottom: 1px solid rgb(222, 222, 222);
+
+         .spot-type {
+             font-size: 14px;
+             color: gray;
+             letter-spacing: 0.22px;
+             font-family: 'Calibre',
+                 Arial,
+                 Helvetica,
+                 sans-serif;
+         }
+
+         .spot-price {
+             font-size: 22px;
+             color: #1b1b1b;
+             letter-spacing: 0.22px;
+             font-family: 'Calibre',
+                 Arial,
+                 Helvetica,
+                 sans-serif;
+
+             span {
+                 font-size: 14px;
+                 color: #000000;
+                 letter-spacing: 0.22px;
+                 font-family: 'Calibre',
+                     Arial,
+                     Helvetica,
+                     sans-serif;
+             }
+         }
+        }
+
+        .booking-detail {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                margin-top: 10px;
+                font-family: 'Calibre',
+                Arial,
+                Helvetica,
+                sans-serif;
+            }
+        }
+    }

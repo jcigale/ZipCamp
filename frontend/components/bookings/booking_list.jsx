@@ -1,6 +1,6 @@
 import React from 'react';
 import BookingListItem from './booking_list_item';
-import ReviewListItem from '../reviews/review_list_item';
+
 
 class BookingList extends React.Component {
     constructor(props) {
@@ -8,11 +8,6 @@ class BookingList extends React.Component {
         this.state = { showing: 'Trips' }
         this.handleReviewClick = this.handleReviewClick.bind(this);
     }
-
-    // componentDidMount() {
-    //     debugger
-    //     this.props.fetchBookings(this.props.user.id)
-    // }
 
     handleReviewClick(id) {
         return e => {
@@ -27,7 +22,7 @@ class BookingList extends React.Component {
         if (!(this.props.session === this.props.user.id)) {
             this.props.history.push("/");
         }
-        const trips = this.props.user.bookings.reverse().map(trip => <BookingListItem key={trip.id} trip={trip} delete={this.props.deleteBooking} update={this.props.updateBooking} history={this.props.history} fetchSpot={this.props.fetchSpot} />)
+        const trips = this.props.user.bookings.map(trip => <BookingListItem key={trip.id} trip={trip} delete={this.props.deleteBooking} update={this.props.updateBooking} history={this.props.history} fetchSpot={this.props.fetchSpot} />)
         return (
            <div className='booking'>
                <div className='bio'>
@@ -38,7 +33,7 @@ class BookingList extends React.Component {
                     <span><i className="fas fa-heart"></i> Zipcamper since May 2021</span>
                </div>
                <div className='trips'>
-                   <span>{this.props.user.bookings.length} Trips</span>
+                   <span className='num-trips'>{this.props.user.bookings.length} Trip(s):</span>
                    {trips}
                </div>
 

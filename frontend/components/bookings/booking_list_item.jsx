@@ -62,12 +62,13 @@ class BookingListItem extends React.Component {
                             <span className='spot-type'>{spot.spot_type}</span>
                             <span className='spot-price'>${spot.price}<span>/NIGHT</span></span>
                         </div>
-                        <div className='booking-time'>
-                            <span>{this.props.trip.start_date} - {this.props.trip.end_date}</span>
+                        <div className='booking-detail'>
+                            <span className='guests'>{this.props.trip.guests} guest(s)</span>
+                            <span className='dates'>{this.dateFormat(this.props.trip.start_date)} - {this.dateFormat(this.props.trip.end_date)}</span>
                         </div>
                     </div>
-            //     </div>
-            // </div>
+                </div>
+            </div>
         );
     }
 

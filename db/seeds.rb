@@ -209,5 +209,6 @@ Booking.create ({
     end_date: "2021-06-01",
     user_id: demoUser.id,
     spot_id: s8.id,
-    spot: s8
+    spot: s8,
+    guests: '2'
 })

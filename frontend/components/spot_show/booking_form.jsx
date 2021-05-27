@@ -7,7 +7,7 @@ class BookingForm extends React.Component {
         this.state = {
             start_date: '',
             end_date: '',
-            guests: 1,
+            guests: '1',
             spot: this.props.spot
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,8 +18,8 @@ class BookingForm extends React.Component {
         debugger
         const spotId = parseInt(this.props.match.params.spotId);
         const booking = Object.assign({}, this.state, { spot_id: spotId });
-        this.props.createBooking(booking);
-        this.props.history.push(`/users/${this.props.session.id}/bookings`);
+        this.props.createBooking(booking).then(() =>
+        (this.props.history.push(`/users/${this.props.session.id}/bookings`)));
     }
 
 
@@ -53,7 +53,7 @@ class BookingForm extends React.Component {
                 <div className='guests'>
                     <div className='text'>
                     <label>Guests</label>
-                            <select name="" id="" onChange={this.update('guests')}>
+                            <select onChange={this.update('guests')}>
                         <option value="1">1 guest</option>
                         <option value="2">2 guests</option>
                         <option value="3">3 guests</option>
