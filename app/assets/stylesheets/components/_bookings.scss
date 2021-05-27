@@ -91,7 +91,7 @@
                  Helvetica,
                  sans-serif;
 
-             span {
+            span {
                  font-size: 14px;
                  color: #000000;
                  letter-spacing: 0.22px;
@@ -100,6 +100,9 @@
                      Helvetica,
                      sans-serif;
              }
+
+            
+
          }
         }
 
@@ -113,6 +116,21 @@
                 Arial,
                 Helvetica,
                 sans-serif;
+            }
+
+            button {
+                margin-top: 20px;
+                border: none;
+                background: #40d9ac;
+                color: white;
+                font-size: 13px;
+                padding: 10px;
+        
+            }
+
+            button:hover {
+                background: #33AD89;
+                cursor: pointer;
             }
         }
     }

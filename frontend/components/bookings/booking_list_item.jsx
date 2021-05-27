@@ -5,28 +5,15 @@ class BookingListItem extends React.Component {
         super(props);
         this.handleDelete = this.handleDelete.bind(this);
         this.dateFormat = this.dateFormat.bind(this);
-        this.handleUpdateClick = this.handleUpdateClick.bind(this);
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleDelete(e) {
         e.preventDefault();
-        const start_date_disabled = new Date(parseInt(this.props.trip.start_date.split("-")[0]), parseInt(this.props.trip.start_date.split("-")[1]) - 1, parseInt(this.props.trip.start_date.split("-")[2].slice(0, 2)));
-        if (new Date() < start_date_disabled) {
-            this.props.delete(this.props.trip.id);
-        }
-        e.stopPropagation();
+        this.props.delete(this.props.trip.id);
+        location.reload();
     }
 
-    handleUpdateClick(e) {
-        e.preventDefault();
-        const start_date_disabled = new Date(parseInt(this.props.trip.start_date.split("-")[0]), parseInt(this.props.trip.start_date.split("-")[1]) - 1, parseInt(this.props.trip.start_date.split("-")[2].slice(0, 2)));
-        if (new Date() < start_date_disabled) {
-            this.props.openModal('edit', this.props.trip)
-        }
-        e.stopPropagation();
-
-    }
 
     dateFormat(date) {
         const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -40,6 +27,8 @@ class BookingListItem extends React.Component {
         const day_of_week = days[new Date(year, parseInt(splitted[1]) - 1, date_num).getDay()];
         return `${day_of_week}, ${date_num} ${month} ${year}`;
     }
+
+   
 
     handleClick(e) {
         e.preventDefault();
@@ -65,6 +54,7 @@ class BookingListItem extends React.Component {
                         <div className='booking-detail'>
                             <span className='guests'>{this.props.trip.guests} guest(s)</span>
                             <span className='dates'>{this.dateFormat(this.props.trip.start_date)} - {this.dateFormat(this.props.trip.end_date)}</span>
+                            <button onClick={this.handleDelete}>Delete</button>
                         </div>
                     </div>
                 </div>
