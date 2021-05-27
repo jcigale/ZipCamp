@@ -1,8 +1,8 @@
-.review-form {
+.review-form, .review-edit-form {
     display: none;
 }
 
-.review-form.is-open {
+.review-form.is-open, .review-edit-form.is-open {
     display: block;
     position: fixed;
     width: 30%;

@@ -16,6 +16,7 @@ class FilterForm extends React.Component {
         );
     }
 
+
  
 
     render() {
@@ -30,7 +31,7 @@ class FilterForm extends React.Component {
                         id="nav-search"
                         className="search"
                         type="text"
-                        placeholder="Search Box"
+                        placeholder="Search location"
                     />
                 </nav>
             </div>

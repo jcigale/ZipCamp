@@ -32,3 +32,7 @@ export const fetchAllReview = (spotId) => dispatch => {
 export const deleteReview = reviewId => dispatch => {
     return APIUtil.deleteReview(reviewId).then(() => dispatch(removeReview(reviewId)));
 }
+
+export const updateReview = review => dispatch => {
+    return APIUtil.updateReview(review).then((review) => dispatch(receiveReview(review)));
+}

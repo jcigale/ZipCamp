@@ -59,5 +59,21 @@
 
       }); 
   </script>
+
+   <script>
+      $(function(){
+
+      $("body").on("click", ".review-edit-button", function(event){
+        event.preventDefault();
+        $(".review-edit-form").addClass("is-open");
+      });
+
+      $("body").on("click", ".review-exit", function(event){
+        event.preventDefault();
+        $(".review-edit-form").removeClass("is-open");
+      });
+
+      }); 
+  </script>
   </body>
 </html>

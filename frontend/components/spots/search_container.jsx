@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { asArray } from '../../reducers/selectors';
 import Search from './search'
 import { updateFilter } from '../../actions/filter_actions';
+import { receiveLocation } from '../../actions/map_action'
 
 
 const mapStateToProps = state => {

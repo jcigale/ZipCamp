@@ -1,4 +1,5 @@
 import React from 'react';
+import ReviewEditForm from '../reviews/review_edit_form_container';
 
 class ReviewListItem extends React.Component {
     constructor(props) {
@@ -54,6 +55,7 @@ class ReviewListItem extends React.Component {
                     {delete_button}
                 </div>
                 <div className="border"></div>
+                <ReviewEditForm review={this.props.review}/>
             </div>
         );
     }

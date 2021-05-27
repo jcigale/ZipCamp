@@ -25,10 +25,11 @@ class Search extends React.Component {
     }
 
     handleSubmit(e) {
+        debugger
         e.preventDefault();
         this.props.receiveLocation(this.state);
         this.props.history.push({
-            pathname: `/search/${this.state.lat},${this.state.lng}`,
+            pathname: `/spots/${this.state.lat},${this.state.lng}`,
             state: this.state
         });
     }
@@ -56,7 +57,7 @@ class Search extends React.Component {
     render() {
         return (
             <div>
-                <FilterForm spotType={this.props.spotType} updateFilter={this.props.updateFilter}/>
+                <FilterForm spotType={this.props.spotType} updateFilter={this.props.updateFilter} handleInput={this.handleInput} handleSubmit={this.handleSubmit}/>
                 <div className='map-spots'>
                     <SpotIndex spots={this.props.spots} spotType={this.props.spotType} />
                     <SpotMap spots={this.props.spots} updateFilter={this.props.updateFilter} />
