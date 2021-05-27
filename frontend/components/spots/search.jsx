@@ -33,14 +33,35 @@ class Search extends React.Component {
         });
     }
 
+    componentDidMount() {
+        let input = document.getElementById('nav-search');
+        let autocomplete = new google.maps.places.Autocomplete(input);
+
+        let mapLocation;
+        let that = this;
+        autocomplete.addListener('place_changed', () => {
+            let address = autocomplete.getPlace().formatted_address;
+            let place = autocomplete.getPlace();
+
+            let lat = place.geometry.location.lat();
+            let lng = place.geometry.location.lng();
+            mapLocation = address ? address : autocomplete.getPlace().name;
+            that.setState({
+                mapLocation: autocomplete.getPlace().name,
+                lat: lat,
+                lng: lng
+            });
+        });
+    }
+
 
     render() {
         return (
             <div>
-                <FilterForm spotType={spotType} updateFilter={updateFilter}/> 
+                {/* <FilterForm spotType={this.props.spotType} updateFilter={this.props.updateFilter}/> */}
                 <div className='map-spots'>
-                <SpotIndex spots={spots} spotType={spotType} />
-                <SpotMap spots={spots} updateFilter={updateFilter} />
+                    <SpotIndex spots={this.props.spots} spotType={this.props.spotType} />
+                    <SpotMap spots={this.props.spots} updateFilter={this.props.updateFilter} />
                 </div>
             </div>
         )

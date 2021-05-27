@@ -1,21 +1,35 @@
 import React from 'react';
-import { icons } from '../../util/icon_hash'
+import { render } from 'react-dom';
+import { icons } from '../../util/icon_hash';
+import Autocomplete from 'react-google-autocomplete';
+import {withRouter} from 'react-router-dom';
 
 
 
-const handleChange = (filter, updateFilter) => e => (
-    updateFilter(filter, e.currentTarget.value)
-);
+class FilterForm extends React.Component {
 
-const FilterForm = ({ spotType, updateFilter }) => (
-    <div>
-        <nav className='filter-nav'>
-            <button value='RVs' onClick={handleChange('spotType', updateFilter)}><i className={icons['rv']}></i> RVs</button>
-            <button value='Campsite' onClick={handleChange('spotType', updateFilter)}><i className={icons['tent']}></i> Campsites</button>
-            <button value='Lodging' onClick={handleChange('spotType', updateFilter)}><i className={icons['lodging']}></i> Lodging</button>
-            <button value='All' onClick={handleChange('spotType', updateFilter)}>All listings</button>  
-        </nav>
-    </div>
-)
+    constructor(props) {
+        super(props)
+
+        this.handleChange = (filter, updateFilter) => e => (
+            updateFilter(filter, e.currentTarget.value)
+        );
+    }
+
+ 
+
+    render() {
+        return (
+            <div>
+                <nav className='filter-nav'>
+                    <button value='RVs' onClick={this.handleChange('spotType', this.props.updateFilter)}><i className={icons['rv']}></i> RVs</button>
+                    <button value='Campsite' onClick={this.handleChange('spotType', this.props.updateFilter)}><i className={icons['tent']}></i> Campsites</button>
+                    <button value='Lodging' onClick={this.handleChange('spotType', this.props.updateFilter)}><i className={icons['lodging']}></i> Lodging</button>
+                    <button value='All' onClick={this.handleChange('spotType', this.props.updateFilter)}>All listings</button>
+                </nav>
+            </div>
+    )}
+}
+
 
 export default FilterForm
