@@ -8,8 +8,7 @@ class Splash extends React.Component {
         nav[0].classList.add('splash');
 
         let covid = document.getElementsByClassName('covid-header');
-        covid[0].classList.add('splash')
-        
+        covid[0].classList.add('splash')  
     }
 
     componentWillUnmount() {
@@ -34,7 +33,7 @@ class Splash extends React.Component {
             <div className='splash-search'>  
                 <div className='where'>
                     <label>WHERE TO?</label>
-                    <input type="text" placeholder="Try..."></input>
+                    <input id='splash-search' className='search' type="text" placeholder="Try..."></input>
                 </div> 
                 <div className='date'>
                     <label>DATES</label>
@@ -52,10 +51,7 @@ class Splash extends React.Component {
                     <Link to='/spots'><button className='search-button'><i className="fas fa-search"></i></button></Link>
                 </div>
                 <img src={toilet} className='toilet'/>
-
-
         </div>
-
     )}
 }
 

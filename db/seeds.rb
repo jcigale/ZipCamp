@@ -201,12 +201,13 @@ Review.create({
     body: 'we had a good time at this location',
     recommended: true,
     author_id: demoUser.id,
-    spot_id: s10.id
+    spot_id: s10.id,
 })
 
 Booking.create ({
     start_date: "2021-05-12",
     end_date: "2021-06-01",
     user_id: demoUser.id,
-    spot_id: s8.id
+    spot_id: s8.id,
+    spot: s8
 })

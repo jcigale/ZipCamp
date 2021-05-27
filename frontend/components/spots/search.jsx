@@ -58,7 +58,7 @@ class Search extends React.Component {
     render() {
         return (
             <div>
-                {/* <FilterForm spotType={this.props.spotType} updateFilter={this.props.updateFilter}/> */}
+                <FilterForm spotType={this.props.spotType} updateFilter={this.props.updateFilter}/>
                 <div className='map-spots'>
                     <SpotIndex spots={this.props.spots} spotType={this.props.spotType} />
                     <SpotMap spots={this.props.spots} updateFilter={this.props.updateFilter} />

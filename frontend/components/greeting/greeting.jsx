@@ -7,8 +7,8 @@ const Greeting = ({ currentUser, logout }) => {
             <div className='left-nav'>
                 <Link to='/'><img src={logo} alt="logo" /></Link>
                 <input
-                    id="pac-input"
-                    className="controls"
+                    id="nav-search"
+                    className="search"
                     type="text"
                     placeholder="Search Box"
                 />

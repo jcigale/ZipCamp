@@ -8,6 +8,7 @@ class BookingForm extends React.Component {
             start_date: '',
             end_date: '',
             guests: 1,
+            spot: this.props.spot
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
