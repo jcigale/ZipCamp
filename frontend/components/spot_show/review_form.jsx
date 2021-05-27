@@ -13,7 +13,7 @@ class ReviewForm extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
+        e.preventDefault();
         const spotId = parseInt(this.props.match.params.spotId);
         const review = Object.assign({}, this.state, { spot_id: spotId });
         this.props.createReview(review);
