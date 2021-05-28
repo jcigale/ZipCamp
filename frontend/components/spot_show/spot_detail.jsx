@@ -21,7 +21,16 @@ const activitiesList = (spot) => {
 class SpotDetail extends React.Component {
 
     constructor(props) {
-        super(props)
+        super(props);
+        this.handleReviewClick = this.handleReviewClick.bind(this);
+    }
+
+    handleReviewClick(e) {
+        e.preventDefault();
+        debugger
+        if (!this.props.session) {
+            this.props.history.push('/login')
+        }
     }
 
     render() {
@@ -90,7 +99,7 @@ class SpotDetail extends React.Component {
                 </div>
                 <div className="border"></div>
                 <ReviewList reviews={reviews} session={this.props.session} deleteReview={this.props.deleteReview} />
-                <button className='leave-review'>Leave a Review</button>
+                <button className='leave-review' onClick={this.handleReviewClick}>Leave a Review</button>
                 <ReviewForm />
                
             </div>
