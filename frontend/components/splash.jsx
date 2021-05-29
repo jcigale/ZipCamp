@@ -35,7 +35,7 @@ class Splash extends React.Component {
                     <label>WHERE TO?</label>
                     <input id='splash-search' className='search' type="text" placeholder="Try..."></input>
                 </div> 
-                <div className='date'>
+                {/* <div className='date'>
                     <label>DATES</label>
                     <input type="date" placeholder="Enter dates"/>
                 </div>
@@ -47,7 +47,7 @@ class Splash extends React.Component {
                         <option value="RVs"></option>
                         <option value="Lodging"></option>
                     </select>
-                </div>
+                </div> */}
                     <Link to='/spots'><button className='search-button'><i className="fas fa-search"></i></button></Link>
                 </div>
                 <img src={toilet} className='toilet'/>

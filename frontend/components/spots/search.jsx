@@ -15,52 +15,38 @@ class Search extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleInput = this.handleInput.bind(this);
-    }
-
-    handleInput(e) {
-        this.setState({
-            mapLocation: e.target.value
-        });
-    }
-
-    handleSubmit(e) {
-        debugger
-        e.preventDefault();
-        this.props.receiveLocation(this.state);
-        this.props.history.push({
-            pathname: `/spots/${this.state.lat},${this.state.lng}`,
-            state: this.state
-        });
     }
 
     componentDidMount() {
         let input = document.getElementById('nav-search');
-        let autocomplete = new google.maps.places.Autocomplete(input);
-        let that = this;
-        autocomplete.addListener('place_changed', () => {
-            let address = autocomplete.getPlace().formatted_address;
-            let place = autocomplete.getPlace();
-
-            let lat = place.geometry.location.lat();
-            let lng = place.geometry.location.lng();
-            let mapLocation = address ? address : autocomplete.getPlace().name;
-            that.setState({
-                mapLocation: autocomplete.getPlace().name,
-                lat: lat,
-                lng: lng
-            });
-        });
+        this.autocomplete = new google.maps.places.Autocomplete(input);
     }
 
+ 
+    handleSubmit(e) {
+        debugger
+        e.preventDefault();
+        let address = this.autocomplete.getPlace().formatted_address;
+        let place = this.autocomplete.getPlace();
+
+        let lat = place.geometry.location.lat();
+        let lng = place.geometry.location.lng();
+        let mapLocation = address ? address : this.autocomplete.getPlace().name;
+        this.state = {
+            mapLocation: this.autocomplete.getPlace().name,
+            lat: lat,
+            lng: lng
+        };
+       
+    }
 
     render() {
         return (
             <div>
-                <FilterForm spotType={this.props.spotType} updateFilter={this.props.updateFilter} handleInput={this.handleInput} handleSubmit={this.handleSubmit}/>
+                <FilterForm spotType={this.props.spotType} updateFilter={this.props.updateFilter} handleSubmit={this.handleSubmit}/>
                 <div className='map-spots'>
                     <SpotIndex spots={this.props.spots} spotType={this.props.spotType} />
-                    <SpotMap spots={this.props.spots} updateFilter={this.props.updateFilter} />
+                    <SpotMap spots={this.props.spots} updateFilter={this.props.updateFilter} state={this.state} />
                 </div>
             </div>
         )

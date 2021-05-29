@@ -27,12 +27,15 @@ class FilterForm extends React.Component {
                     <button value='Campsite' onClick={this.handleChange('spotType', this.props.updateFilter)}><i className={icons['tent']}></i> Campsites</button>
                     <button value='Lodging' onClick={this.handleChange('spotType', this.props.updateFilter)}><i className={icons['lodging']}></i> Lodging</button>
                     <button value='All' onClick={this.handleChange('spotType', this.props.updateFilter)}>All listings</button>
+                    <form onSubmit={this.props.handleSubmit}>
                     <input
                         id="nav-search"
                         className="search"
                         type="text"
                         placeholder="Search location"
                     />
+                    <button type='submit'>search</button>
+                    </form>
                 </nav>
             </div>
     )}

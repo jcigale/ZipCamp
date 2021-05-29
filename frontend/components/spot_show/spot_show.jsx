@@ -31,7 +31,7 @@ class SpotShow extends React.Component {
             <div className='spot-show'>
                 <SpotDetail spot={this.props.spot} state={this.props.state} reviews={this.props.spot.reviews} deleteReview={this.props.deleteReview} session={this.props.session} />
                 <BookingForm spot={this.props.spot} session={this.props.state.session} />
-                <SpotMap spots={spots} spotId={this.props.spotId} singleSpot={true} fetchSpot={this.props.fetchSpot} />
+                {/* <SpotMap spots={spots} spotId={this.props.spotId} singleSpot={true} fetchSpot={this.props.fetchSpot} /> */}
             </div>
         )
     }
