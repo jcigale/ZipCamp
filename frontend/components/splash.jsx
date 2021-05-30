@@ -8,7 +8,10 @@ class Splash extends React.Component {
         nav[0].classList.add('splash');
 
         let covid = document.getElementsByClassName('covid-header');
-        covid[0].classList.add('splash')  
+        covid[0].classList.add('splash'); 
+
+        let splashInput = document.getElementById('splash-search');
+        this.autocomplete = new google.maps.places.Autocomplete(splashInput);
     }
 
     componentWillUnmount() {

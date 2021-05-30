@@ -20,6 +20,7 @@ class Search extends React.Component {
     componentDidMount() {
         let input = document.getElementById('nav-search');
         this.autocomplete = new google.maps.places.Autocomplete(input);
+        
     }
 
  
