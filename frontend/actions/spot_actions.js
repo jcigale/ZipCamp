@@ -20,7 +20,7 @@ export const fetchSpots = (filters) => dispatch => (
 )
 
 export const fetchSpot = id => dispatch => { 
-    //debugger
+    //
     return (
     
     APIUtil.fetchSpot(id).then(spot => (

@@ -2,7 +2,7 @@ import { RECEIVE_SPOTS, RECEIVE_SPOT, RECEIVE_REVIEW, RECEIVE_BOOKING } from "..
 
 const spotsReducer = (state = {}, action) => {
   Object.freeze(state);
-  //debugger
+  //
   switch (action.type) {
     case RECEIVE_SPOTS:
       return action.spots;

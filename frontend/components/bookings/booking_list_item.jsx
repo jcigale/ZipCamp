@@ -37,7 +37,7 @@ class BookingListItem extends React.Component {
     }
 
     render() {  
-        debugger
+        
         const spot = this.props.trip.spot
 
         return (

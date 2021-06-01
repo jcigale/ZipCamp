@@ -1,6 +1,7 @@
 import React from 'react';
 import SpotIndex from './spot_index';
 import SpotMap from './spot_map';
+import {spotMap} from './spot_map';
 import FilterForm from './filter_form';
 import { render } from 'react-dom';
 class Search extends React.Component {
@@ -14,6 +15,7 @@ class Search extends React.Component {
             lng: 119.5383
         };
 
+
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -25,19 +27,28 @@ class Search extends React.Component {
 
  
     handleSubmit(e) {
-        debugger
-        e.preventDefault();
-        let address = this.autocomplete.getPlace().formatted_address;
+        
+        //e.preventDefault();
+        //let address = this.autocomplete.getPlace().formatted_address;
         let place = this.autocomplete.getPlace();
 
         let lat = place.geometry.location.lat();
         let lng = place.geometry.location.lng();
-        let mapLocation = address ? address : this.autocomplete.getPlace().name;
-        this.state = {
-            mapLocation: this.autocomplete.getPlace().name,
-            lat: lat,
-            lng: lng
-        };
+        
+        // this.state = {
+        //     mapLocation: this.autocomplete.getPlace().name,
+        //     lat: lat,
+        //     lng: lng
+        // };
+
+        let newLatLng = { lat: lat, lng: lng }
+        // spotMap.panTo(newLatLng)
+        this.props.history.push({
+            pathname: '/spots',
+            search: `lat=${lat}&lng=${lng}`
+        });
+
+       
        
     }
 
@@ -47,7 +58,7 @@ class Search extends React.Component {
                 <FilterForm spotType={this.props.spotType} updateFilter={this.props.updateFilter} handleSubmit={this.handleSubmit}/>
                 <div className='map-spots'>
                     <SpotIndex spots={this.props.spots} spotType={this.props.spotType} />
-                    <SpotMap spots={this.props.spots} updateFilter={this.props.updateFilter} state={this.state} />
+                    <SpotMap spots={this.props.spots} updateBounds={this.props.updateBounds} location={this.props.location} />
                 </div>
             </div>
         )

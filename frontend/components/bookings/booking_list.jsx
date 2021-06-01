@@ -17,7 +17,7 @@ class BookingList extends React.Component {
     }
 
     render() {
-        debugger
+        
    
         if (!(this.props.session === this.props.user.id)) {
             this.props.history.push("/");

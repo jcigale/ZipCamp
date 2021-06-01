@@ -27,7 +27,7 @@ class SpotDetail extends React.Component {
 
     handleReviewClick(e) {
         e.preventDefault();
-        debugger
+        
         if (!this.props.session) {
             this.props.history.push('/login')
         }

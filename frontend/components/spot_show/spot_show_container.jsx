@@ -6,7 +6,7 @@ import { selectSpot, selectReviews } from '../../reducers/selectors';
 import SpotShow from './spot_show';
 
 const mapStateToProps = (state, {match}) => {
-    //debugger
+    //
     const spotId = parseInt(match.params.spotId);
 
     return {
