@@ -17,7 +17,7 @@ class MarkerManager {
 
         Object.keys(this.markers)
         .filter(spotId => !spotsObj[spotId])
-        .forEach(spotId => this.removeMarker(this.markers[spotId])) 
+        // .forEach(spotId => this.removeMarker(this.markers[spotId])) 
     }
 
     createMarker(spot) {
@@ -31,10 +31,10 @@ class MarkerManager {
         this.markers[marker.spotId] = marker;
     }
 
-    removeMarker(marker) {
-        this.markers[marker.spotId].setMap(null);
-        delete this.marker[marker.spotId];
-    }
+    // removeMarker(marker) {
+    //     this.markers[marker.spotId].setMap(null);
+    //     delete this.marker[marker.spotId];
+    // }
 }
 
 export default MarkerManager;
