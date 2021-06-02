@@ -74,7 +74,7 @@ class Splash extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                 <div className='where'>
                     <label>WHERE TO?</label>
-                    <input id='splash-search' className='search' type="text" placeholder="Try..."></input>
+                    <input id='splash-search' className='search' type="text" placeholder="Try Long Lake, Yellowstone, Massachussetts..."></input>
                 </div> 
                     <button type='submit' className='search-button'><i className="fas fa-search"></i></button>
                     </form>
