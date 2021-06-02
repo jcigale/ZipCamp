@@ -35,19 +35,20 @@ class Search extends React.Component {
         let lat = place.geometry.location.lat();
         let lng = place.geometry.location.lng();
         
-        // this.state = {
-        //     mapLocation: this.autocomplete.getPlace().name,
-        //     lat: lat,
-        //     lng: lng
-        // };
+        this.state = {
+            mapLocation: this.autocomplete.getPlace().name,
+            lat: lat,
+            lng: lng
+        };
 
-        let newLatLng = { lat: lat, lng: lng }
         // spotMap.panTo(newLatLng)
         this.props.history.push({
             pathname: '/spots',
             search: `lat=${lat}&lng=${lng}`
         });
 
+        this.setState({ state: this.state });
+        
        
        
     }

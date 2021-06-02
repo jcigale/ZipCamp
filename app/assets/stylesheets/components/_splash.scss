@@ -132,10 +132,18 @@
     font-size: 12px;
     align-items: center;
 
+    form {
+        display: flex;
+        // flex-direction: row;
+        width: 100%;
+        align-items: center;
+    }
+
     div{
         display: flex;
         flex-direction: column;
         padding: 20px;
+   
     }
 
     button {

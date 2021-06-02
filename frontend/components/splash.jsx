@@ -2,6 +2,18 @@ import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
 
 class Splash extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            mapLocation: "",
+            lat: 37.8651,
+            lng: 119.5383
+        };
+
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
 
     componentDidMount() {
         let nav = document.getElementsByClassName('nav-bar');
@@ -22,6 +34,31 @@ class Splash extends React.Component {
         covid[0].classList.remove('splash')
     }
 
+    handleSubmit(e) {
+
+        //e.preventDefault();
+        //let address = this.autocomplete.getPlace().formatted_address;
+        let place = this.autocomplete.getPlace();
+
+        let lat = place.geometry.location.lat();
+        let lng = place.geometry.location.lng();
+
+        this.state = {
+            mapLocation: this.autocomplete.getPlace().name,
+            lat: lat,
+            lng: lng
+        };
+
+        // spotMap.panTo(newLatLng)
+        this.props.history.push({
+            pathname: '/spots',
+            search: `lat=${lat}&lng=${lng}`
+        });
+
+        this.setState({ state: this.state });
+
+    }
+
     render() {
         return (
         <div className='splash'>
@@ -34,24 +71,13 @@ class Splash extends React.Component {
             </div>
 
             <div className='splash-search'>  
+                <form onSubmit={this.handleSubmit}>
                 <div className='where'>
                     <label>WHERE TO?</label>
                     <input id='splash-search' className='search' type="text" placeholder="Try..."></input>
                 </div> 
-                {/* <div className='date'>
-                    <label>DATES</label>
-                    <input type="date" placeholder="Enter dates"/>
-                </div>
-                <div className='accomodations'>
-                    <label>ACCOMODATIONS</label>
-                    <select className="type" >
-                        <option value="All listing"></option>
-                        <option value="Campsites"></option>
-                        <option value="RVs"></option>
-                        <option value="Lodging"></option>
-                    </select>
-                </div> */}
-                    <Link to='/spots'><button className='search-button'><i className="fas fa-search"></i></button></Link>
+                    <button type='submit' className='search-button'><i className="fas fa-search"></i></button>
+                    </form>
                 </div>
                 <img src={toilet} className='toilet'/>
         </div>

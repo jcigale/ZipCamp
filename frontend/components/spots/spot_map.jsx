@@ -19,8 +19,7 @@ class SpotMap extends React.Component {
     }
    
     componentDidMount() {
-        
-        
+        debugger
         let { lat, lng } = queryString.parse(this.props.location.search);
         let latitude = parseFloat(lat);
         let longitude = parseFloat(lng);
@@ -47,6 +46,7 @@ class SpotMap extends React.Component {
     componentDidUpdate() {
         
         this.MarkerManager.updateMarkers(this.props.spots);
+
   
     }
 
@@ -59,6 +59,10 @@ class SpotMap extends React.Component {
             };
             this.props.updateBounds(bounds);
         });
+
+        
+
+        
     }
 
     handleMarkerClick(spot) {
