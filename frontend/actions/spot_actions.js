@@ -16,7 +16,7 @@ export const receiveSpot = ({ spot }) => ({
 })
 
 export const fetchSpots = (filters) => dispatch => {
-    debugger
+    
     return (
     APIUtil.fetchSpots(filters).then(spots => (dispatch(receiveSpots(spots))))
     )}

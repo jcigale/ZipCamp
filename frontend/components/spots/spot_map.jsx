@@ -19,7 +19,7 @@ class SpotMap extends React.Component {
     }
    
     componentDidMount() {
-        debugger
+        
         let { lat, lng } = queryString.parse(this.props.location.search);
         let latitude = parseFloat(lat);
         let longitude = parseFloat(lng);
