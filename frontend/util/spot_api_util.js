@@ -2,7 +2,7 @@ export const fetchSpots = data => (
     $.ajax({
         method: 'GET',
         url: 'api/spots',
-        data: { bounds: data },
+        data
     })
 )
 

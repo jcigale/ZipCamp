@@ -23,5 +23,5 @@ const changeBounds = bounds => {
 
 export const updateBounds = (bounds) => (dispatch, getState) => {
   dispatch(changeBounds(bounds));
-  return fetchSpots(getState().ui.filter)(dispatch);
+  return fetchSpots(getState().ui.filters)(dispatch);
 };

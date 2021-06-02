@@ -15,9 +15,11 @@ export const receiveSpot = ({ spot }) => ({
     spot,
 })
 
-export const fetchSpots = (filters) => dispatch => (
+export const fetchSpots = (filters) => dispatch => {
+    debugger
+    return (
     APIUtil.fetchSpots(filters).then(spots => (dispatch(receiveSpots(spots))))
-)
+    )}
 
 export const fetchSpot = id => dispatch => { 
     //
