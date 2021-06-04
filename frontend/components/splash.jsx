@@ -35,11 +35,9 @@ class Splash extends React.Component {
     }
 
     handleSubmit(e) {
-
-        //e.preventDefault();
-        //let address = this.autocomplete.getPlace().formatted_address;
+        e.preventDefault();
+        
         let place = this.autocomplete.getPlace();
-
         let lat = place.geometry.location.lat();
         let lng = place.geometry.location.lng();
 
@@ -49,7 +47,7 @@ class Splash extends React.Component {
             lng: lng
         };
 
-        // spotMap.panTo(newLatLng)
+  
         this.props.history.push({
             pathname: '/spots',
             search: `lat=${lat}&lng=${lng}`
