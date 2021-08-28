@@ -30,7 +30,7 @@ class BookingList extends React.Component {
                         <img src={tent} />
                         <h2>{this.props.user.first_name} {this.props.user.last_name}</h2>
                    </div>
-                    <span><i className="fas fa-heart"></i> Zipcamper since May 2021</span>
+                    <span><i className="fas fa-heart"></i> Zipcamper since August 2021</span>
                </div>
                <div className='trips'>
                    <span className='num-trips'>{this.props.user.bookings.length} Trip(s):</span>
