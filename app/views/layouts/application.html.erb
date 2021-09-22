@@ -5,6 +5,15 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta property="og:title" content="ZipCamp" />
+     <meta property='og:image' content="<%= image_url('zipcamp_screen.png') %>"/>
+     <meta property="og:description"
+       content="Zipcamp"
+     />
+     <meta property="og:url"
+       content="https://zipcamp.herokuapp.com/#/"
+     />
+
     <%= stylesheet_link_tag  'application', media: 'all' %> 
     <%= javascript_include_tag 'application' %>
     <script type='text/javascript'>
